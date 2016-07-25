@@ -52,13 +52,13 @@ function wcr_setup() {
 	set_post_thumbnail_size( 1200, 9999 );
 
 	// This theme uses wp_nav_menu() in two locations.
+    /*
+     * 后台增加菜单设置功能
+     */
 	register_nav_menus( array(
 		'primary' => 'Primary Menu',
 		'social'  => 'Social Links Menu',
 	) );
-    /*
-     * 后台增加菜单设置功能
-     */
     /*
     add_theme_support('nav-menus');
     if(function_exists('register_nav_menus')) {
@@ -84,46 +84,12 @@ function wcr_setup() {
     add_theme_support( 'post-formats', array(
         'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
     ) );
-
-	/*
-	 * This theme styles the visual editor to resemble the theme style,
-	 * specifically font, colors, icons, and column width.
-	 */
-	//add_editor_style( array( 'css/editor-style.css', twentysixteen_fonts_url() ) );
-
-	// Indicate widget sidebars can use selective refresh in the Customizer.
-	//add_theme_support( 'customize-selective-refresh-widgets' );
 }
-endif; // twentysixteen_setup
+endif; // wcr_setup
 add_action( 'after_setup_theme', 'wcr_setup' );
 
 // 并没有什么卵用
 if ( ! isset( $content_width ) ) $content_width = 900;
-
-// 自定义标题
-/*
-function wcr_custom_title() {
-    echo '<title>';
-    if ( is_home() ) {
-        bloginfo('name'); echo " - "; bloginfo('description');
-    } elseif ( is_category() ) {
-        single_cat_title(); echo " | "; bloginfo('name');
-    } elseif (is_single() || is_page() ) {
-        single_post_title(); echo " | "; bloginfo('name');
-    } elseif (is_search() ) {
-        echo "搜索结果"; echo " | "; bloginfo('name');
-    } elseif (is_404() ) {
-        echo '页面未找到!';
-    } else {
-        wp_title('',true);
-    }
-    if ( (isset($paged) && $paged >= 2) )
-            echo ' | ' . sprintf( '第 %s 页' , $paged );
-    echo '</title>';
-}
-add_action('wp_head','wcr_custom_title');
-*/
-
 
 /**
  * Enqueues scripts and styles.
@@ -131,12 +97,9 @@ add_action('wp_head','wcr_custom_title');
  * @since Twenty Sixteen 1.0
  */
 function wcr_scripts() {
-    /*
-
 	// Theme stylesheet.
-	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri() );
-
-
+	wp_enqueue_style( 'wcr-style', get_stylesheet_uri() );
+    /*
 	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160412', true );
 	// Load the html5 shiv.
 	wp_enqueue_script( 'wcr-html5', '//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js', array(), '3.7.3' );
@@ -179,7 +142,7 @@ if ( ! function_exists( 'wcr_head_css' ) ) :
 function wcr_head_css() {
     $meta = '';
 	$meta .= "<link rel=\"shortcut icon\" href=\"".esc_url(get_template_directory_uri() . '/images/favicon.ico')."\" type=\"image/x-icon\" />\n";
-	$meta .= "<link rel=\"stylesheet\" href=\"".esc_url(get_template_directory_uri() . '/style.css')."\" />\n";
+	//$meta .= "<link rel=\"stylesheet\" href=\"".esc_url(get_template_directory_uri() . '/style.css')."\" />\n";
     if ( isset($web_clip) && $web_clip <> '') {
         $meta .= "<link rel=\"apple-touch-icon-precomposed\" href=\"".esc_url($web_clip)."\" />\n";
     }

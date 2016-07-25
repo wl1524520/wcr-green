@@ -14,6 +14,7 @@ $oddcomment = 'class="alt" ';
 		</ul>
 	<?php endif; ?>
 	<p><?php paginate_comments_links(); ?></p>
-	<?php comment_form(array('format' => 'html5')); ?>
+	<?php comment_form(); ?>
+    <?php /*comment_form(array('format' => 'html5')); */?>
 </div>
 <?php } ?>

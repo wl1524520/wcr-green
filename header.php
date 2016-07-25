@@ -73,12 +73,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                    <h3><?php bloginfo('name'); ?></h3>
-                    <p class="desktop"><?php bloginfo('description'); ?></p>
-                    <p class="mobile"><?php echo $hello; ?></p>
+                    <h2 class="wp-caption"><?php bloginfo('name'); ?></h2>
+                    <p class="wp-caption-text"><?php bloginfo('description'); ?></p>
+                    <p class="wp-slogan"><?php echo $hello; ?></p>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                    <div class="media">
+                    <div class="media wp-media">
                         <div class="media-left">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/images/avatar_64x64.png'); ?>" alt="<?php bloginfo('name'); ?>" class="img-circle">
                         </div>
