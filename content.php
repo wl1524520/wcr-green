@@ -1,0 +1,26 @@
+<?php
+/*
+ * 戊辰人博客文章列表页面
+ *      文章中无图，但有缩略图的会分两栏显示
+ *      文章中有图的不分栏
+ */
+?>
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <h1><a href="<?php the_permalink() ?>"><?php if(get_the_title($post->ID)) { the_title(); } else { the_time( get_option( 'date_format' ) ); } ?></a></h1>
+    <div class="meta">
+        <span class="meta-label"><i class="fa fa-calendar"></i> <?php echo '日期：'; ?> <?php the_time( get_option( 'date_format' ) ); ?></span>
+        <span class="meta-label"><i class="fa fa-user"></i> <?php echo '作者：'; ?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php the_author(); ?></a></span>
+        <span class="meta-label"><i class="fa fa-bars"></i> <?php echo '分类：'; ?> <?php the_category(', '); ?></span>
+        <?php if(function_exists('the_views')) { echo '<span class="meta-label"><i class="fa fa-bookmark"></i> 阅读： ';  the_views() ; echo '</span>'; } ?>
+    </div>
+
+    <div class="row">
+        <?php if ( ! post_password_required() ) : ?>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 post-excerpt">
+                <?php the_content('阅读全文...'); ?>
+            </div>
+
+        <?php endif; ?>
+    </div>
+</article>
