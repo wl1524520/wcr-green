@@ -5,7 +5,6 @@
  */
 global $wcr_config;
 ?>
-    </div> <!-- end main-container -->
 
 <footer id="footer">
     <div class="container">

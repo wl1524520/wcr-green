@@ -160,7 +160,7 @@ h6, .h6 {
     text-align:center;
 }
 
-/* change border colour to suit your needs */
+/*
 hr {
     display:block;
     height:1px;
@@ -169,35 +169,8 @@ hr {
     margin:1em 0;
     padding:0;
 }
+*/
 
-/*
- * 日历表格样式
- */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-bottom: 1px solid #ddd;
-    margin: 15px 0;
-    width:100%;
-}
-td {
-    border: 1px solid #ddd;
-}
-th {
-    background: none repeat scroll 0 0 #5cb85c;
-    border: 1px solid #5cb85c;
-    color: #fff;
-    font-weight: bold;
-}
-th a {
-    display: block;
-    color: #5cb85c;
-}
-td, th{
-    font-size: 16px;
-    padding: 10px;
-    text-align: center;
-}
 
 /*
  * 去除外发光
@@ -487,9 +460,42 @@ input[type=search] {
     border-bottom-width:2px;
     border-bottom-style:solid;
 }
-.pagesidebar .widget ul, .pagesidebar .widget .tagcloud, .pagesidebar .widget .textwidget, .pagesidebar .widget #calendar_wrap{
-	padding: 10px 10px 10px 20px;
+.pagesidebar .widget ul,
+.pagesidebar .widget .tagcloud,
+.pagesidebar .widget .textwidget{
+	padding: 10px;
 }
+/*
+ * 日历表格样式
+ */
+.pagesidebar .widget #calendar_wrap{
+	padding: 10px 5px;
+}
+#wp-calendar {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width:100%;
+}
+#wp-calendar td {
+    border: 1px solid #ddd;
+}
+#wp-calendar th {
+    background: none repeat scroll 0 0 #5cb85c;
+    border: 1px solid #5cb85c;
+    color: #fff;
+    font-weight: bold;
+}
+#wp-calendar th a {
+    display: block;
+    color: #5cb85c;
+}
+#wp-calendar td,
+#wp-calendar th {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+}
+
 .pagesidebar .widget .tagcloud a{
     padding: 2px;
     margin: 2px;
@@ -528,7 +534,9 @@ input[type=search] {
  * 日历样式
  */
 .pagesidebar .widget #calendar_wrap caption{
-    padding:0 0 5px 0;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-align:center;
     color: #505050;
 }
@@ -552,17 +560,19 @@ input[type=search] {
 .pagesidebar .widget p, .pagesidebar .widget span{
 	opacity: 0.65;
 }
+/*
 .pagesidebar .widget img {
 	height:auto;
 	margin: 5px 0;
 }
+*/
 .pagesidebar .widget select, .pagesidebar .widget textarea {
 	margin:15px 0;
 	width:100%;
 	padding:5px;
 }
 .pagesidebar .widget, .pagesidebar .searchform_block{
-	margin-bottom:25px;
+	margin-bottom:15px;
 }
 .pagesidebar .widget hr{
 	border-width:2px;
@@ -801,7 +811,7 @@ textarea#comment{
  * 分页导航
  */
 .page-navi{
-    margin-top: 15px;
+    margin: 15px 0;
     overflow:hidden;
     text-align:center;
     width:100%;
@@ -836,7 +846,7 @@ textarea#comment{
 #footer {
     background: #404040;
     border-top: 4px solid #b70000;
-    padding: 20px 0 45px;
+    padding: 20px 0;
 }
 #footer, #footer p, #footer a {
     //font-family: 'robotolight';
@@ -848,6 +858,8 @@ textarea#comment{
     color: #5cb85c;
 }
 #footer hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-top:1px solid #fff;
 }
 #footer .ft-text-left,
@@ -928,6 +940,18 @@ textarea#comment{
         max-width: 242px;
     }
 
+    .pagesidebar .widget ul,
+    .pagesidebar .widget .tagcloud,
+    .pagesidebar .widget .textwidget{
+        padding: 10px 10px 10px 20px;
+    }
+
+    #wp-calendar td,
+    #wp-calendar th {
+        padding: 5px 2px;
+        font-size: 12px;
+    }
+
     .sidebar-single,
     .sidebar-page{
         display: block;
@@ -945,10 +969,6 @@ textarea#comment{
     }
     #footer .ft-text-right{
         text-align: right;
-    }
-    td, th{
-        padding: 5px 2px;
-        font-size: 12px;
     }
 }
 
@@ -968,14 +988,16 @@ textarea#comment{
         display:inline;
         margin-right: 15px;
     }
-    td, th{
+    #wp-calendar td,
+    #wp-calendar th {
         padding: 8px 5px;
         font-size: 14px;
     }
 }
 /* 大屏幕（大桌面显示器，大于等于 1200px） */
 @media (min-width: 1200px) {
-    td, th{
+    #wp-calendar td,
+    #wp-calendar th {
         padding: 10px;
         font-size: 16px;
     }

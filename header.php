@@ -95,9 +95,8 @@
     </div>
     <?php endif; ?>
 
-    <div class="main-container">
-        <div class="container">
-            <div class="nav-bread">
-                <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
-            </div>
+    <div class="container">
+        <div class="nav-bread">
+            <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
         </div>
+    </div>

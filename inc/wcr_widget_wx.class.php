@@ -34,7 +34,7 @@ class WCR_Widget_wx extends WP_Widget {
 		}
 ?>
         <div>
-            <img src="<?php global $wcr_config; echo esc_url(get_template_directory_uri(). '/' . $wcr_config['wcr_weixin_img']); ?>" class="img-responsive">
+            <img src="<?php global $wcr_config; echo esc_url(get_template_directory_uri(). '/' . $wcr_config['wcr_weixin_img']); ?>" class="img-responsive center-block">
         </div>
 <?php
 		echo $args['after_widget'];
