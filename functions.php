@@ -121,7 +121,7 @@ function wcr_nav_menu() {
         $defaults = array(
             'container'         => 'div',
             'container_class'   => 'collapse navbar-collapse',
-            'container_id'      => 'bs-example-navbar-collapse-1',
+            'container_id'      => 'wcr-nav-menu',
             'menu'              => 'mainav',
             'menu_class'        => 'nav navbar-nav',
             'menu_id'           => 'top-nav',
