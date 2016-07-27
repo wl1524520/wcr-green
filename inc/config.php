@@ -18,9 +18,3 @@ $wcr_config = array(
     "wcr_404_img"       =>  'images/404.png',
 );
 
-function wcr_pub_notice() {
-    $notice = "<b>欢迎来到戊辰人博客</b><br>";
-    $notice .= "戊辰人博客是一个关注互联网动态和分享IT技术知识的个人网站，作者王路，网名戊辰人，";
-    $notice .= "如发现有侵犯您版权的内容，请通过网站下方联系方式与我联系。";
-    return $notice;
-}

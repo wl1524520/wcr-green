@@ -458,3 +458,13 @@ function comment_mail_notify($comment_id) {
     }
 }
 add_action('comment_post', 'comment_mail_notify');
+
+// 显示页面性能参数
+function wcr_performance( $visible = false ) {
+    $stat = sprintf('%d queries in %f seconds, using %.3fMB memory',
+        get_num_queries(),
+        timer_stop(0, 6),
+        memory_get_peak_usage() / 1024 / 1024
+    );
+    echo $visible ? $stat : "<!-- {$stat} -->\n" ;
+}

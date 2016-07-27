@@ -16,15 +16,13 @@ global $wcr_config;
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <?php $blog_email = get_bloginfo('admin_email');?>
                 <p class="ft-text-center">站长邮箱：<a title="给站长写信" href="mailto:<?php echo $blog_email; ?>"><?php echo $blog_email; ?></a></p>
-                    <p class="ft-text-center">腾讯 Q Q ：<a title="QQ：<?php echo $wcr_config['wcr_qq']; ?>" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $wcr_config['wcr_qq']; ?>&site=qq&menu=yes" rel="nofollow"><?php echo $wcr_config['wcr_qq']; ?></a></p>
+                <p class="ft-text-center">腾讯 Q Q ：<a title="QQ：<?php echo $wcr_config['wcr_qq']; ?>" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $wcr_config['wcr_qq']; ?>&site=qq&menu=yes" rel="nofollow"><?php echo $wcr_config['wcr_qq']; ?></a></p>
             </div>
+
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <div class="ft-text-right">
                 <a href="<?php echo $wcr_config['wcr_facebook_url']; ?>" title="<?php echo $wcr_config['wcr_facebook_title']; ?>" target="_blank">
                     <img width="32" height="32" src="<?php echo esc_url(get_template_directory_uri() . '/images/facebook-logo.png'); ?>" alt="<?php echo $wcr_config['wcr_facebook_title']; ?>" />
-                </a>
-                <a title="QQ：<?php echo $wcr_config['wcr_qq']; ?>" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $wcr_config['wcr_qq']; ?>&site=qq&menu=yes" rel="nofollow">
-                    <img width="32" height="32" src="<?php echo esc_url(get_template_directory_uri() . '/images/qq-logo.png'); ?>" alt="<?php echo $wcr_config['wcr_qq']; ?>" />
                 </a>
                 <a href="<?php echo esc_url(get_template_directory_uri(). '/' . $wcr_config['wcr_weixin_img']); ?>" data-lightbox="image-1" data-title="<?php echo $wcr_config['wcr_weixin_title']; ?>">
                     <img width="32" height="32" src="<?php echo esc_url(get_template_directory_uri() . '/images/weixin-logo.png'); ?>" alt="微信" />
@@ -61,4 +59,5 @@ global $wcr_config;
 <script src="<?php echo esc_url(get_template_directory_uri() . '/statics/basic-share/0.2.min.js'); ?>"></script>
 <?php wp_footer(); ?>
 </body>
+<?php if(function_exists('wcr_performance')) wcr_performance(false); ?>
 </html>
