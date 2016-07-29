@@ -3,7 +3,6 @@
  * 功能函数文件
  */
 require get_template_directory() . '/inc/BootstrapWalker.class.php';
-require get_template_directory() . '/inc/config.php';
 require get_template_directory() . '/inc/wcr_widget.class.php';
 require get_template_directory() . '/inc/wcr_widget_wx.class.php';
 require get_template_directory() . '/inc/wcr_meta.class.php';
