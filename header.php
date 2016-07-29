@@ -84,6 +84,6 @@
 
     <div class="container">
         <div class="nav-bread">
-            <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+            <?php if (function_exists('dimox_breadcrumbs')) {dimox_breadcrumbs();} ?>
         </div>
     </div>
