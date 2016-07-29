@@ -1,9 +1,26 @@
 $(function(){
 
-    /*
-     * 让Bootstrap菜单恢复超链接功能
-     */
     $(document).ready(function(){
+        /* Back To Top */
+        var offset = 220;
+        var duration = 500;
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > offset) {
+                $('.crunchify-top').fadeIn(duration);
+            } else {
+                $('.crunchify-top').fadeOut(duration);
+            }
+        });
+         
+        $('.crunchify-top').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+
+        /*
+         * 让Bootstrap菜单恢复超链接功能
+         */
         if( ! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
             $(document).off('click.bs.dropdown.data-api');
             $('.navbar .dropdown').hover(function() {
@@ -73,6 +90,5 @@ $(function(){
             }
         }
     });
-    
 });
 

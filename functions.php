@@ -346,3 +346,9 @@ function wcr_performance( $visible = false ) {
     //$stat .= sprintf(', using %.3fMB memory', memory_get_peak_usage() / 1024 / 1024);
     echo $visible ? $stat : "<!-- {$stat} -->\n" ;
 }
+
+// 获取主题相对网站根目录的路径
+function wcr_template_path() {
+    $index = strpos(get_template_directory(), 'wp-content');
+    return substr(get_template_directory(), $index - 1);
+}
