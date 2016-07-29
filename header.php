@@ -27,9 +27,6 @@
 
     <link href="<?php echo esc_url(get_template_directory_uri() . '/statics/font-awesome-4.6.1/css/font-awesome.min.css'); ?>" rel="stylesheet" />
 
-    <!-- lightbox -->
-    <link href="<?php echo esc_url(get_template_directory_uri() . '/js/lightbox/lightbox.css'); ?>" rel="stylesheet" />
-
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
