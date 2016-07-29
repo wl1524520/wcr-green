@@ -8,7 +8,8 @@ get_header(); ?>
         <div class="col-xs-12 col-sm-8 article-list">
             <?php 
             if(have_posts()) :  
-                while (have_posts()) : the_post();
+                while (have_posts()) :
+                    the_post();
                     get_template_part( 'content', get_post_format() );
                 endwhile;
             else :

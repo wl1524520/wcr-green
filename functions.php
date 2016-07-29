@@ -118,23 +118,30 @@ add_action( 'wp_enqueue_scripts', 'wcr_scripts' );
  * 生成Bootstrap导航菜单
  */
 function wcr_nav_menu() {
-    if(function_exists('wp_nav_menu') && has_nav_menu('primary')):
-        $defaults = array(
-            'container'         => 'div',
-            'container_class'   => 'collapse navbar-collapse',
-            'container_id'      => 'wcr-nav-menu',
-            'menu'              => 'mainav',
-            'menu_class'        => 'nav navbar-nav',
-            'menu_id'           => 'top-nav',
-            'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-            'fallback_cb'       => '',
-            'walker'            => new Bootstrap_Walker(),
-            'depth'             => 2
-        );
+    $defaults = array(
+        'container'         => 'div',
+        'container_class'   => 'collapse navbar-collapse',
+        'container_id'      => 'wcr-nav-menu',
+        'menu'              => 'mainav',
+        'menu_class'        => 'nav navbar-nav',
+        'menu_id'           => 'top-nav',
+        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+        'fallback_cb'       => '',
+        'walker'            => new Bootstrap_Walker(),
+        'depth'             => 2
+    );
+    if(function_exists('wpwcr_nav_menu') && has_nav_menu('primary')) {
+        // 使用缓存
+        wpwcr_nav_menu($defaults);
+    } else {
         wp_nav_menu($defaults);
-    endif;
+    }
+    /*
+    if (function_exists('wp_nav_menu') && has_nav_menu('primary')) {
+        wp_nav_menu($defaults);
+    }
+     */
 }
-
 
 /*
  * 增加wp_head内容
@@ -201,21 +208,52 @@ function wcr_pagenavi($range = 9){
 	if ( !isset($max_page) ) {
         $max_page = $wp_query->max_num_pages;
     }
-	if($max_page > 1){if(!$paged){$paged = 1;}
-	if($paged != 1){echo "<a href='" . get_pagenum_link(1) . "' class='extend' title='跳转到首页'> 返回首页 </a>";}
-	previous_posts_link(' 上一页 ');
-    if($max_page > $range){
-		if($paged < $range){for($i = 1; $i <= ($range + 1); $i++){echo "<a href='" . get_pagenum_link($i) ."'";
-		if($i==$paged)echo " class='current'";echo ">$i</a>";}}
-    elseif($paged >= ($max_page - ceil(($range/2)))){
-		for($i = $max_page - $range; $i <= $max_page; $i++){echo "<a href='" . get_pagenum_link($i) ."'";
-		if($i==$paged)echo " class='current'";echo ">$i</a>";}}
-	elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))){
-		for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++){echo "<a href='" . get_pagenum_link($i) ."'";if($i==$paged) echo " class='current'";echo ">$i</a>";}}}
-    else{for($i = 1; $i <= $max_page; $i++){echo "<a href='" . get_pagenum_link($i) ."'";
-    if($i==$paged)echo " class='current'";echo ">$i</a>";}}
-	next_posts_link(' 下一页 ');
-    if($paged != $max_page){echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='跳转到最后一页'> 最后一页 </a>";}}
+    if($max_page > 1) {
+        if(!$paged) {
+            $paged = 1;
+        }
+
+        if($paged != 1) {
+            echo "<a href='" . get_pagenum_link(1) . "' class='extend' title='跳转到首页'> 返回首页 </a>";
+        }
+        previous_posts_link(' 上一页 ');
+
+        if($max_page > $range) {
+            if($paged < $range) {
+                for($i = 1; $i <= ($range + 1); $i++) {
+                    echo "<a href='" . get_pagenum_link($i) ."'";
+                    if($i==$paged)
+                        echo " class='current'";
+                    echo ">$i</a>";
+                }
+            } elseif ($paged >= ($max_page - ceil(($range/2)))) {
+                for($i = $max_page - $range; $i <= $max_page; $i++) {
+                    echo "<a href='" . get_pagenum_link($i) ."'";
+                    if($i==$paged)
+                        echo " class='current'";
+                    echo ">$i</a>";
+                }
+            } elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))) {
+                for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++) {
+                    echo "<a href='" . get_pagenum_link($i) ."'";
+                    if($i==$paged) 
+                        echo " class='current'";
+                    echo ">$i</a>";
+                    }
+            }
+        } else {
+            for($i = 1; $i <= $max_page; $i++) {
+                echo "<a href='" . get_pagenum_link($i) ."'";
+                if($i==$paged)
+                    echo " class='current'";
+                echo ">$i</a>";
+            }
+        }
+        next_posts_link(' 下一页 ');
+        if($paged != $max_page) {
+            echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='跳转到最后一页'> 最后一页 </a>";
+        }
+    }
 }
 
 /*
@@ -287,15 +325,15 @@ function comment_mail_notify($comment_id) {
         $subject = '您在 [' . get_option("blogname") . '] 的留言有了回复';
         $message = '
             <div style="background-color:#eef2fa; border:1px solid #d8e3e8; color:#111; padding:0 15px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px;">
-            <p>' . trim(get_comment($parent_id)->comment_author) . ', 您好!</p>
-            <p><strong>您曾在<a href="'.get_permalink( $comment->comment_post_ID ).'">《' . get_the_title($comment->comment_post_ID) . '》</a>的留言:</strong><br />'
-            . trim(get_comment($parent_id)->comment_content) . '</p>
-            <p><strong>' . trim($comment->comment_author) . ' 给您的回复:</strong><br />'
-            . trim($comment->comment_content) . '<br /></p>
+                <p>' . trim(get_comment($parent_id)->comment_author) . ', 您好!</p>
+                <p><strong>您曾在<a href="'.get_permalink( $comment->comment_post_ID ).'">《' . get_the_title($comment->comment_post_ID) . '》</a>的留言:</strong><br />'
+                    . trim(get_comment($parent_id)->comment_content) . '</p>
+                <p><strong>' . trim($comment->comment_author) . ' 给您的回复:</strong><br />'
+                    . trim($comment->comment_content) . '<br /></p>
                 <p>您可以点击 查看回复完整內容</p>
                 <p>欢迎再度光临 <a href="' . home_url() . '">' . get_option('blogname') . '</a></p>
                 <p>(此邮件由系统自动发送，请勿回复.)</p>
-                </div>';
+            </div>';
         $from = "From: \"" . get_option('blogname') . "\" <$wp_email>";
         $headers = "$from\nContent-Type: text/html; charset=" . get_option('blog_charset') . "\n";
         wp_mail( $to, $subject, $message, $headers );
@@ -305,10 +343,7 @@ add_action('comment_post', 'comment_mail_notify');
 
 // 显示页面性能参数
 function wcr_performance( $visible = false ) {
-    $stat = sprintf('%d queries in %f seconds, using %.3fMB memory',
-        get_num_queries(),
-        timer_stop(0, 6),
-        memory_get_peak_usage() / 1024 / 1024
-    );
+    $stat = get_num_queries() . ' queries in ' . timer_stop(0, 6) . ' seconds';
+    //$stat .= sprintf(', using %.3fMB memory', memory_get_peak_usage() / 1024 / 1024);
     echo $visible ? $stat : "<!-- {$stat} -->\n" ;
 }
