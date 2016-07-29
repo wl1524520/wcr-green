@@ -10,7 +10,7 @@
 function dimox_breadcrumbs() {
 
 	/* === OPTIONS === */
-	$text['home']     = '<i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;' . get_bloginfo('name'); // text for the 'Home' link
+	$text['home']     = '<span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;' . get_bloginfo('name'); // text for the 'Home' link
 	$text['category'] = '%s'; // text for a category page
 	$text['search']   = '%s'; // text for a search results page
 	$text['tag']      = '%s'; // text for a tag page
@@ -21,8 +21,8 @@ function dimox_breadcrumbs() {
 
 	$wrap_before    = '<div class="breadcrumbs">'; // the opening wrapper tag
 	$wrap_after     = '</div><!-- .breadcrumbs -->'; // the closing wrapper tag
-	$sep            = '›'; // separator between crumbs
-	//$sep            = '/'; // separator between crumbs
+	//$sep            = '›'; // separator between crumbs
+	$sep            = '<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>'; // separator between crumbs
 	$sep_before     = '<span class="sep">'; // tag before separator
 	$sep_after      = '</span>'; // tag after separator
 	$show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show

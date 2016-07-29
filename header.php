@@ -25,8 +25,6 @@
         <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link href="<?php echo esc_url(get_template_directory_uri() . '/statics/font-awesome-4.6.1/css/font-awesome.min.css'); ?>" rel="stylesheet" />
-
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

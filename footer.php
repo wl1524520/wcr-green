@@ -33,7 +33,7 @@ global $wcr_config;
         </div>
     </div>
 </footer>
-<a href="#" class="crunchify-top"><i class="fa fa-arrow-up fa-lg"></i></a>
+<a href="#" class="crunchify-top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
 </div> <!-- end #wrapper -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>

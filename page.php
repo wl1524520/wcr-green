@@ -15,7 +15,7 @@
                                 <h2 class="text-center"><?php the_title(); ?></h2>
                                 <?php the_content(); ?>
                             </div>
-                            <div class="meta_tags_div"><p class="meta_tags"><?php the_tags(); ?></p></div>
+                            <div class="meta_tags_div"><p class="meta_tags"><span class="glyphicon glyphicon-tag" aria-hidden="true"></span> <?php the_tags(); ?></p></div>
                             <div class="wcr_notice">
                                 <p>除非注明，<a title="<?php bloginfo('name'); ?>" href="<?php echo esc_url(home_url('/')); ?>" target="_blank"><?php bloginfo('name'); ?></a>文章均为原创，转载请以链接形式标明本文地址</p>
                                 <?php 
