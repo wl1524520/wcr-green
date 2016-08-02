@@ -685,7 +685,35 @@ article .alignright{
  * 关联文章
  */
 .wp-related-content{
-    margin: 20px 10px 10px;
+    margin: 10px;
+}
+.wp-related-content ul {
+    display: block;
+    padding-left: 0;
+}
+.wp-related-content ul li {
+    display: block;
+    float: none;
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+}
+.wp-related-content ul li:hover {
+    background: #ddd;
+}
+.wp-related-content ul li span {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+}
+.wp-related-content ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 
 
@@ -951,6 +979,17 @@ textarea#comment{
     .sidebar-single,
     .sidebar-page{
         display: block;
+    }
+    .wp-related-content ul li {
+        display: block;
+        float: left;
+        list-style: none;
+        width: 25%;
+        padding: 5px;
+        background: #fff;
+    }
+    .wp-related-content ul li span {
+        height: 40px;
     }
     .comments article .comment-metadata {
         position: absolute;

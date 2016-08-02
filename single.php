@@ -32,7 +32,19 @@
                             </div>
 
                             <div class="wp-related-content">
-                                <?php if ( function_exists( 'wp_related_posts' ) ) {wp_related_posts();} ?>
+                                <?php 
+                                    if ( function_exists('wpjam_related_posts') ) {
+                                        $args = array(
+                                            'class'=>'',                    //外层ul的class。
+                                            'thumb' => true,                //是否带缩略图，默认带
+                                            'size' => 'medium',             //缩略图大小
+                                            'crop'=> true,                  //缩略图是否裁剪
+                                            'thumb_class'=>'center-block', //缩略图的class
+                                            'number_per_row'=>4             //如果设置为缩略图为横排，每行个数
+                                        );
+                                        wpjam_related_posts(4, $args);
+                                    } 
+                                ?>
                             </div>
                             <?php comments_template(); ?>
                             <?php wcr_paginate_page(); ?>
