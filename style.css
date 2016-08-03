@@ -1032,6 +1032,8 @@ textarea#comment{
     /* hidden vertical scroll in firefox by hisune.com */
     overflow-y: hidden !important;
     overflow-x: auto !important;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
 .syntaxhighlighter table .container:before {
     /* conflict with bootstrap in firefox by hisune.com */
