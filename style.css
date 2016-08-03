@@ -296,6 +296,9 @@ blockquote {
     font-size:14px;
     line-height: 1.2;
 }
+.breadcrumbs .sep {
+    color: #777;
+}
 .breadcrumbs a {
     color: #5cb85c;
 }

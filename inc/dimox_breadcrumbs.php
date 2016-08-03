@@ -22,9 +22,11 @@ function dimox_breadcrumbs() {
 	$wrap_before    = '<div class="breadcrumbs">'; // the opening wrapper tag
 	$wrap_after     = '</div><!-- .breadcrumbs -->'; // the closing wrapper tag
 	//$sep            = '›'; // separator between crumbs
-	$sep            = '<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>'; // separator between crumbs
-	$sep_before     = '<span class="sep">'; // tag before separator
-	$sep_after      = '</span>'; // tag after separator
+	$sep            = '<span class="glyphicon glyphicon-menu-right sep" aria-hidden="true"></span>'; // separator between crumbs
+	//$sep_before     = '<span class="sep">'; // tag before separator
+	//$sep_after      = '</span>'; // tag after separator
+	$sep_before     = ''; // tag before separator
+	$sep_after      = ''; // tag after separator
 	$show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
 	$show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
 	$show_current   = 1; // 1 - show current page title, 0 - don't show
