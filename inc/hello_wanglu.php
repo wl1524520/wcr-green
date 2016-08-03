@@ -3,19 +3,10 @@
  * @package Hello_Wanglu
  * @version 1.6
  */
-/*
-Plugin Name: Hello Dolly
-Plugin URI: https://wordpress.org/plugins/hello-dolly/
-Description: This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly</cite> in the upper right of your admin screen on every page.
-Author: Matt Mullenweg
-Version: 1.6
-Author URI: http://ma.tt/
-*/
 
-//function hello_wanglu_get_lyric() {
 function hello_wanglu() {
 	/** These are the lyrics to Hello Dolly */
-	$lyrics = "既不回头，何必不忘；既然无缘，何须誓言；今日种种，似水无痕；明夕何夕，君已陌路。
+	$lyrics = '既不回头，何必不忘；既然无缘，何须誓言；今日种种，似水无痕；明夕何夕，君已陌路。
 我一直以为人是慢慢变老的，其实不是，人是一瞬间变老的。
 如果你都不知道自己想去哪里，那去哪里都是一样的。
 我能够允许你逃避过去，不过至少从现在或者明天开始都不要再逃避。
@@ -29,7 +20,6 @@ function hello_wanglu() {
 跟谁在一起舒服就和谁在一起，包括朋友、亲人也是，累了就躲远一点。取悦别人远不如快乐自己！
 人，宁可孤独，也不违心；宁可抱憾，也不将就。
 能入我心者，我待以君王；不入我心者，不屑以敷衍！
-谎言不一定是谎言，被发现的谎言，才算是谎言。
 喜欢上你，爱上你，真是太好了，谢谢。
 我愿意给你自己所有的快乐，你愿意分担我一半的难过吗？
 我不渴望什么在别的城市迎来的春天，只要和你在一起的春天就好，只要和你在一起就好⋯⋯
@@ -58,7 +48,18 @@ function hello_wanglu() {
 一旦你驯服了什么，就要对她负责，永远的负责。
 不知道你能不能明白生命叫做孤独，我就是这样，孤独地生活着，没有一个人真正跟我谈得来。
 缺月挂疏桐，漏断人初静。谁见幽人独往来，缥缈孤鸿影。惊起却回头，有恨无人省。拣尽寒枝不肯栖，寂寞沙洲冷。
-当朋友是不需要什么资格的。";
+只有当你喜欢上一个远方的人，才会发现，那些不能及时分享的喜怒哀乐，会让你有巨大的落差和失落感，甚至让你委屈的流下泪来。
+有些人是不敢想以后的，你和这个人只有眼前，没有来日方长。
+那些你曾想一起守着一辈子的人，总会在某个普通的日子里和你道别，你来不及挽留和再见，两个原本那么亲密的人，最终会在红尘里各自遗忘。
+对那个人来说，你已经仁至义尽了，爱也爱了等也等了，还要你怎样呢？
+有些人啊，若是做不了恋人，就什么也不是。
+有的人就是这样，不会说情话，不说要温暖，不肯说挽留，但只要在一起就拼了命对人家好。
+以前还想过要怎么和你道别，后来才明白，哪里需要道别啊，突然的不联系了，然后断绝了一切往来，就像从来都没认识过一样。
+想走的人，再多挽留也是无用的，就像春去秋来，就像花谢花开，都是注定。
+你是我不可企及的山峰，也是我无法跨越的海洋，你是我夜以继日思念的人，也是我拼了命都得不到的珍贵，你是我看得见摸不到的流星，也是我难以割舍，想断却断不了的流水。
+不是你不想联系那个人，而是那个人给你的态度，像是你在打扰人家。
+点开你的头像，想给你说句晚安，又迟迟不敢发出去，就这么坐了一夜，把晚安换成早安。
+当朋友是不需要什么资格的。';
 
 	// Here we split it into lines
 	$lyrics = explode( "\n", $lyrics );
