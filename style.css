@@ -3,23 +3,14 @@ Theme Name: Wcr Green
 Theme URI: http://wanglu.info/
 Author: 戊辰人
 Author URI: http://wanglu.info/about
-Description: 戊辰人博客自用主题，采用 html5 + css3，仅支持Chrome、Firefox、IE9+等现代浏览器，不支持IE6/7/8，基于Font Awesome和Bootstrap，响应式布局，移动设备优先；未使用框架，适合喜欢纯代码控制主题样式的人群使用，适用WordPress 4.2.x版本。
-Version: 1.0
+Description: 戊辰人博客自用主题，采用 html5 + css3，仅支持Chrome、Firefox、IE9+等现代浏览器，不支持IE6/7/8，基于Bootstrap，响应式布局，移动设备优先；未使用框架，适合喜欢纯代码控制主题样式的人群使用，适用WordPress 4.5.x版本。
+Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, right-sidebar
 Text Domain: wcr-green
 */
 
-.sticky {}
-.gallery-caption {}
-.bypostauthor {}
-
-.aligncenter {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
 
 /**  fonts  **/
 /*
@@ -78,6 +69,7 @@ Text Domain: wcr-green
 /*
  * main color : #5cb85c
  */
+@-ms-viewport { width: device-width; }
 
 /*
  * chrome scrollbar
@@ -236,6 +228,32 @@ blockquote {
     background-color: #eee;
 }
 
+// WordPress 系统内置类
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+
+.alignleft{
+    display: block;
+    margin: 10px;
+    float: left;
+}
+.alignright{
+    display: block;
+    margin: 10px;
+    float: right;
+}
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.size-full {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /*
  * 自定义样式
  */
@@ -356,6 +374,9 @@ article .more-link {
     font-size: 16px;
     line-height: 20px;
     text-align: left;
+}
+article .post-excerpt img {
+    margin-bottom: 15px;
 }
 article .post-excerpt>p {
     text-indent: 2em;
@@ -597,9 +618,12 @@ article{
 article h1 a{
 	color: #1A1A1A;
 }
-.singlepost{
+.singlepost {
     border: 0;
     margin-bottom:40px;
+}
+.singlepost .single-content img {
+    margin-bottom: 15px;
 }
 .singlepost .single-content>p {
     text-indent: 2em;
@@ -630,14 +654,6 @@ article li{
     list-style: disc;
     font-size:15px;
     line-height: 1.3;
-}
-article .alignleft{
-    margin: 10px;
-    float: left;
-}
-article .alignright{
-    margin: 10px;
-    float: right;
 }
 .singlepost .wcr_notice{
     margin:10px 0;
@@ -774,7 +790,7 @@ article .alignright{
     -opera-border-radius:3px;
     -o-border-radius:3px;
     -border-radius:3px;
-    behavior: url(css/PIE.htc);
+    //behavior: url(css/PIE.htc);
     *zoom:1
 }
 .comments .comment-form .submit:hover,

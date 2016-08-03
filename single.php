@@ -38,7 +38,7 @@
                                 'thumb' => true,                //是否带缩略图，默认带
                                 'size' => 'medium',             //缩略图大小
                                 'crop'=> true,                  //缩略图是否裁剪
-                                'thumb_class'=>'center-block', //缩略图的class
+                                'thumb_class'=>'img-responsive center-block', //缩略图的class
                                 'number_per_row'=>4             //如果设置为缩略图为横排，每行个数
                             );
                             wpjam_related_posts(4, $args);
@@ -46,13 +46,12 @@
                     ?>
                 </div>
                 <?php comments_template(); ?>
-                <?php wcr_paginate_page(); ?>
             </article>
 <?php endwhile; ?>
 
         </div>
         <div class="col-xs-12 col-sm-4 sidebar-single">
-            <?php  get_sidebar(); ?>
+            <?php get_sidebar(); ?>
         </div>
     </div>
 </div>

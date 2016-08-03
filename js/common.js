@@ -31,9 +31,5 @@ $(function(){
         });
     }
 
-    // 为文章中所有图片增加img-responsive类，并解决图片居中问题
-    var obj = $("article img");
-    obj.addClass("img-responsive");
-
 });
 

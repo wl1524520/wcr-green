@@ -3,7 +3,7 @@ class WCR_Widget_wx extends WP_Widget {
 
     function __construct() {
         parent::__construct(
-            'wcr_list_pages_widget',
+            'wcr_widget_wx',
             '关注微信',
             array(
                 'description' => '扫描微信二维码'
@@ -12,7 +12,10 @@ class WCR_Widget_wx extends WP_Widget {
     }
 
     function form( $instance ) {
-        $title = esc_attr($instance['title']);
+        if(isset($instance['title']))
+            $title = esc_attr($instance['title']);
+        else
+            $title = '';
         ?>
         <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php echo 'Title:'; ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
         <?php

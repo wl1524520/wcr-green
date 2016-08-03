@@ -22,7 +22,6 @@
                     ?>
                 </div>
                 <?php comments_template(); ?>
-                <?php wcr_paginate_page(); ?> 
             </article>
 <?php endwhile; ?>		
 

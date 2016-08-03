@@ -3,7 +3,7 @@ class WCR_Widget extends WP_Widget {
 
     function __construct() {
         parent::__construct(
-            'wcr_list_pages_widget',
+            'wcr_widget_status',
             '站点统计',
             array(
                 'description' => '站点统计功能'
@@ -12,7 +12,10 @@ class WCR_Widget extends WP_Widget {
     }
 
     function form( $instance ) {
-        $title = esc_attr($instance['title']);
+        if(isset($instance['title']))
+            $title = esc_attr($instance['title']);
+        else
+            $title = '';
         ?>
         <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php echo 'Title:'; ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
         <?php
@@ -50,7 +53,7 @@ class WCR_Widget extends WP_Widget {
     }
 }
 
-function wcr_register_list_pages_widget() {
+function wcr_widget_status() {
     register_widget( 'WCR_Widget' );
 }
-add_action( 'widgets_init', 'wcr_register_list_pages_widget' );
+add_action('widgets_init', 'wcr_widget_status');

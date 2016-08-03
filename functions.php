@@ -177,9 +177,9 @@ function wcr_widgets_init() {
 	));
 }
 endif;
-add_action( 'widgets_init', 'wcr_widgets_init' );
+add_action('widgets_init', 'wcr_widgets_init');
 
-// 分页导航
+// 上一页下一页
 /*
 if ( ! function_exists( 'wcr_paginate_page' ) ) :
 function wcr_paginate_page() {
