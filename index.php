@@ -10,10 +10,10 @@ get_header(); ?>
             if(have_posts()) :  
                 while (have_posts()) :
                     the_post();
-                    get_template_part( 'content', get_post_format() );
+                    get_template_part('content', get_post_format());
                 endwhile;
             else :
-                    get_template_part( 'content', 'none' );
+                    get_template_part('content', 'none');
             endif;
             ?>
             <div class="page-navi"><?php wcr_pagenavi(9); ?></div>
