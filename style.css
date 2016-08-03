@@ -1035,6 +1035,7 @@ textarea#comment{
     /* hidden vertical scroll in firefox by hisune.com */
     overflow-y: hidden !important;
     overflow-x: auto !important;
+    padding: 4px 0;
     border: 1px solid #ddd;
     border-radius: 3px;
 }

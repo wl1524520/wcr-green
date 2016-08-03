@@ -10,7 +10,7 @@ require get_template_directory() . '/inc/wcr_mail.php';
 require get_template_directory() . '/inc/hello_wanglu.php';
 require get_template_directory() . '/inc/dimox_breadcrumbs.php';
 
-if ( ! function_exists( 'wcr_setup' ) ) :
+if (! function_exists('wcr_setup')) :
 function wcr_setup() {
 	/*
 	 * Make theme available for translation.
@@ -21,7 +21,7 @@ function wcr_setup() {
 	//load_theme_textdomain( 'twentysixteen', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+	add_theme_support('automatic-feed-links');
 
 	/*
 	 * Let WordPress manage the document title.
@@ -29,7 +29,7 @@ function wcr_setup() {
 	 * hard-coded <title> tag in the document head, and expect WordPress to
 	 * provide it for us.
 	 */
-	add_theme_support( 'title-tag' );
+	add_theme_support('title-tag');
 
 	/*
 	 * Enable support for custom logo.
@@ -49,8 +49,8 @@ function wcr_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 1200, 9999 );
+	add_theme_support('post-thumbnails');
+	set_post_thumbnail_size(1200, 9999);
 
 	// This theme uses wp_nav_menu() in two locations.
     /*
@@ -60,12 +60,6 @@ function wcr_setup() {
 		'primary' => 'Primary Menu',
 		'social'  => 'Social Links Menu',
 	) );
-    /*
-    add_theme_support('nav-menus');
-    if(function_exists('register_nav_menus')) {
-        register_nav_menu( 'primary', 'Top-Menu' );
-    }
-    */
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -90,7 +84,7 @@ endif; // wcr_setup
 add_action( 'after_setup_theme', 'wcr_setup' );
 
 // 并没有什么卵用
-if ( ! isset( $content_width ) ) $content_width = 900;
+if (! isset($content_width)) $content_width = 900;
 
 /**
  * Enqueues scripts and styles.
@@ -167,18 +161,9 @@ add_action('wp_head', 'wcr_head_css');
 function custom_excerpt_length( $length ) {
         return 200;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
-/*
- * 更改 more 标签的样式
- */
-function new_excerpt_more( $more ) {
-    //return '&nbsp;&nbsp;&nbsp;&nbsp;<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More</a>';
-    //return '&nbsp;&nbsp;&nbsp;[......]';
-    return '';
-}
-add_filter( 'excerpt_more', 'new_excerpt_more' );
-
+// 侧边栏
 if ( ! function_exists( 'wcr_widgets_init' ) ) :
 function wcr_widgets_init() {
 	register_sidebar(array(
@@ -194,11 +179,21 @@ function wcr_widgets_init() {
 endif;
 add_action( 'widgets_init', 'wcr_widgets_init' );
 
+// 分页导航
+/*
 if ( ! function_exists( 'wcr_paginate_page' ) ) :
 function wcr_paginate_page() {
-	wp_link_pages( array( 'before' => '<div class="pagination">', 'after' => '</div><div class="clear"></div>', 'link_before' => '<span class="current_pag">','link_after' => '</span>' ) );
+    wp_link_pages(
+        array(
+            'before' => '<div class="pagination">',
+            'after' => '</div><div class="clear"></div>',
+            'link_before' => '<span class="current_pag">',
+            'link_after' => '</span>'
+        )
+    );
 }
 endif;
+ */
 
 /*
  * 分页导航代码
@@ -278,21 +273,6 @@ function wcr_catch_image($id) {
         }
     }
     return $first_img;
-}
-/*
- * 判断文章是否有图片
- */
-function wcr_empty_image(){
-    global $post, $posts;
-    $first_img = '';
-    ob_start();
-    ob_end_clean();
-    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-    $first_img = $matches[1][0];
-    if(empty($first_img)){
-        return true;
-    }
-    return false;
 }
 
 /*
