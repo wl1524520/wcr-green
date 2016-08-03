@@ -34,15 +34,6 @@ $(function(){
     // 为文章中所有图片增加img-responsive类，并解决图片居中问题
     var obj = $("article img");
     obj.addClass("img-responsive");
-    obj.each(function(index){
-        if($(this).hasClass('aligncenter')) {
-            $(this).addClass("center-block");
-        }
-    });
-    var objDiv = $("article div");
-    if(objDiv.hasClass('aligncenter')) {
-        objDiv.addClass("center-block");
-    }
 
 });
 
