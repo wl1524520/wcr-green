@@ -40,9 +40,7 @@ class WCR_Widget extends WP_Widget {
             <li>日志数量：<?php
                     $count_posts = wp_count_posts();
                     echo $published_posts = $count_posts->publish;
-                ?> 篇
-            </li>
-
+                ?> 篇</li>
             <li>评论数量：<?php echo get_comments(array('count'=>true)); ?> 条</li>
             <li>标签数量：<?php echo $count_tags = wp_count_terms('post_tag'); ?> 个</li>
             <li>建站日期：2014年11月11日</li>
