@@ -7,7 +7,6 @@ require get_template_directory() . '/inc/wcr_widget.class.php';
 require get_template_directory() . '/inc/wcr_widget_wx.class.php';
 require get_template_directory() . '/inc/wcr_meta.class.php';
 require get_template_directory() . '/inc/wcr_mail.php';
-require get_template_directory() . '/inc/hello_wanglu.php';
 require get_template_directory() . '/inc/dimox_breadcrumbs.php';
 
 if (! function_exists('wcr_setup')) :

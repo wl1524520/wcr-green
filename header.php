@@ -50,7 +50,15 @@
     </header>
 
     <?php if ( is_home() || is_front_page() ) : ?>
-    <?php $hello = hello_wanglu(); ?>
+    <?php 
+        if(function_exists('hello_wanglu')) {
+            // hello-wanglu 插件
+            // 插件地址：https://github.com/wl1524520/hello-wanglu.git
+            $hello = hello_wanglu();
+        } else {
+            $hello = '不记初心，方得始终。';
+        }
+    ?>
     <div class="home-title">
         <div class="container">
             <div class="row">
