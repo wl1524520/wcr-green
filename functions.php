@@ -92,7 +92,7 @@ if (! isset($content_width)) $content_width = 900;
  */
 function wcr_scripts() {
 	// Theme stylesheet.
-	wp_enqueue_style( 'wcr-style', get_stylesheet_uri() );
+	wp_enqueue_style('wcr-style', get_stylesheet_uri());
     /*
 	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160412', true );
 	// Load the html5 shiv.
@@ -101,15 +101,15 @@ function wcr_scripts() {
 	wp_enqueue_script( 'wcr-html52', '//cdn.bootcss.com/respond.js/1.4.2/respond.min.js', array(), '1.4.2' );
 	wp_script_add_data( 'wcr-html52', 'conditional', 'lt IE 9' );
     */
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if ( is_singular() && comments_open() && get_option('thread_comments') ) {
+		wp_enqueue_script('comment-reply');
 	}
 
     // 移除默认添加到头部的 jquery
-    wp_deregister_script('jquery-core');
-    wp_deregister_script('jquery-migrate');
+    wp_deregister_script('jquery');
+    wp_register_script('jquery'); // lazy-load 依赖
 }
-add_action( 'wp_enqueue_scripts', 'wcr_scripts' );
+add_action('wp_enqueue_scripts', 'wcr_scripts');
 
 /*
  * 生成Bootstrap导航菜单
