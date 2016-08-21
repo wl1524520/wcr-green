@@ -7,31 +7,10 @@ global $wcr_config;
 ?>
 
 <footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <p class="ft-text-left">&copy; 版权所有 2014-2016 <a title="<?php echo bloginfo('name'); ?>" href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a></p>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <p class="ft-text-center">E-mail：<?php echo get_bloginfo('admin_email'); ?></p>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <p class="ft-text-right">
-                    <a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank"><?php echo get_option( 'zh_cn_l10n_icp_num' );?></a>
-                </p>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-            <p class="ft-text-left">Powerd By <a href="https://cn.wordpress.org/" rel="external nofollow" target="_blank">WordPress.</a></p>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-            <p class="ft-text-right">Theme Designed By <a title="<?php echo bloginfo('name'); ?>" href="<?php echo esc_url(home_url('/about')); ?>" target="_blank">戊辰人.</a></p>
-            </div>
-        </div>
-    </div>
+    <p class="text-center">
+        <span><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank"><?php echo get_option( 'zh_cn_l10n_icp_num' );?></a><span>
+        <span>&copy; 2014-2016 <a title="<?php echo bloginfo('name'); ?>" href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a><span>
+    </p>
 </footer>
 <a href="#" class="crunchify-top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
 </div> <!-- end #wrapper -->

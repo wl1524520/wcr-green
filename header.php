@@ -72,11 +72,9 @@
                         <div class="media-left">
                             <img src="<?php echo esc_url(get_template_directory_uri() . '/images/avatar_64x64.png'); ?>" alt="<?php bloginfo('name'); ?>" class="img-circle">
                         </div>
-                        <div class="media-body">
-                            <p id='hello-wanglu'>
-                                <b>欢迎来到戊辰人博客</b><br>
-                                <?php echo $hello; ?>
-                            </p>
+                        <div id="hello-wanglu" class="media-body">
+                            <p><strong>欢迎来到戊辰人博客</strong></p>
+                            <p><?php echo $hello; ?></p>
                         </div>
                     </div>
                 </div>
