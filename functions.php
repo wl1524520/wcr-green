@@ -107,7 +107,7 @@ function wcr_scripts() {
 
     // 移除默认添加到头部的 jquery
     wp_deregister_script('jquery');
-    wp_register_script('jquery'); // lazy-load 依赖
+    wp_register_script('jquery', ''); // lazy-load 依赖
 }
 add_action('wp_enqueue_scripts', 'wcr_scripts');
 
