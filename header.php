@@ -49,7 +49,7 @@
         </nav>
     </header>
 
-    <?php if ( is_home() || is_front_page() ) : ?>
+    <?php //if ( is_home() || is_front_page() ) : ?>
     <?php 
         if(function_exists('hello_wanglu')) {
             // hello-wanglu 插件
@@ -81,7 +81,7 @@
             </div>
         </div>
     </div>
-    <?php endif; ?>
+    <?php //endif; ?>
 
     <div class="container">
         <div class="nav-bread">
