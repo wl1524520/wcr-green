@@ -328,7 +328,7 @@ blockquote {
  * 文章列表
  */
 .article-list article{
-    padding: 15px 25px;
+    padding: 15px 15px;
     background: #fff;
     border: solid 1px #ccc;
     -webkit-box-shadow: 0 4px 12px #ccc;
@@ -625,7 +625,7 @@ article h1 a{
 }
 .singlepost {
     background: #fff;
-    padding: 15px 25px;
+    padding: 15px 15px;
     margin-bottom:25px;
     border: solid 1px #ccc;
     -webkit-box-shadow: 0 4px 12px #ccc;
@@ -1039,6 +1039,10 @@ textarea#comment{
     }
     .wp-slogan {
         font-size: 18px;
+    }
+    .article-list article,
+    .singlepost {
+        padding: 15px 25px;
     }
     article .meta .meta-label{
         display:inline;
