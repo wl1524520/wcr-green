@@ -104,8 +104,14 @@ body {
     padding-top: 51px;
     font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","冬青黑体","STHeiti","Microsoft YaHei",sans-serif;
     font-size: 14px;
+    background: #eceff1;
+    //background-color: #fff;
+}
+/*
+.container {
     background-color: #fff;
 }
+*/
 
 article,aside,details,figcaption,figure,footer,header,main,nav,section {
     display: block;
@@ -264,14 +270,6 @@ blockquote {
 }
 .wp-caption {
     font-weight: 400;
-    margin: 10px 0;
-    text-align: center;
-}
-.wp-caption-text {
-    display: none;
-    font-size: 16px;
-    line-height: 1.3;
-    font-style: italic;
     text-align: center;
 }
 .wp-slogan {
@@ -329,26 +327,24 @@ blockquote {
 /*
  * 文章列表
  */
-/*
 .article-list article{
-    //padding: 0 15px;
+    padding: 15px 25px;
+    background: #fff;
     border: solid 1px #ccc;
     -webkit-box-shadow: 0 4px 12px #ccc;
     -moz-box-shadow: 0 4px 12px #ccc;
     box-shadow: 0 4px 12px #ccc;
 }
-*/
 article {
-    padding: 0;
-    margin-bottom:45px;
+    margin-bottom:25px;
 }
 article h1{
-    margin: 8px 10px;
+    margin: 8px 0;
 }
 article .meta {
     display: block;
     margin-bottom: 8px;
-    padding: 10px;
+    padding: 10px 0;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
@@ -381,7 +377,7 @@ article .post-excerpt img {
     margin-bottom: 15px;
 }
 article .post-excerpt>p {
-    text-indent: 2em;
+    //text-indent: 2em;
 }
 
 /*
@@ -391,6 +387,13 @@ article .post-excerpt>p {
 .sidebar-single,
 .sidebar-page{
     display: none;
+}
+.pagesidebar aside {
+    background: #fff;
+    border: solid 1px #ccc;
+    -webkit-box-shadow: 0 4px 12px #ccc;
+    -moz-box-shadow: 0 4px 12px #ccc;
+    box-shadow: 0 4px 12px #ccc;
 }
 .pagesidebar .widget{
     margin-bottom: 25px;
@@ -621,20 +624,40 @@ article h1 a{
 	color: #1A1A1A;
 }
 .singlepost {
-    border: 0;
-    margin-bottom:40px;
+    background: #fff;
+    padding: 15px 25px;
+    margin-bottom:25px;
+    border: solid 1px #ccc;
+    -webkit-box-shadow: 0 4px 12px #ccc;
+    -moz-box-shadow: 0 4px 12px #ccc;
+    box-shadow: 0 4px 12px #ccc;
+}
+.singlepost .single-content {
 }
 .singlepost .single-content img {
     margin-bottom: 15px;
 }
 .singlepost .single-content>p {
-    text-indent: 2em;
+    //text-indent: 2em;
 }
 .singlepost .single-content a:hover{
     text-decoration: underline;
 }
 .singlepost p a{
     display:inline;
+}
+.singlepost input {
+    font-size:13px;
+    line-height:18px;
+    height:34px;
+    padding:7px 9px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.singlepost input[type=submit] {
+    background: #5cb85c;
+    color: #fff;
+    border: 1px solid #5cb85c;
 }
 
 
@@ -847,18 +870,23 @@ textarea#comment{
  * 分页导航
  */
 .page-navi{
-    margin: 15px 0;
+    background: #fff;
+    padding: 8px 0;
+    margin-bottom: 25px;
     overflow:hidden;
     text-align:center;
-    width:100%;
+    border: solid 1px #ccc;
+    -webkit-box-shadow: 0 4px 12px #ccc;
+    -moz-box-shadow: 0 4px 12px #ccc;
+    box-shadow: 0 4px 12px #ccc;
 }
 .page-navi a{
     display: inline;
     height:36px;
     border:1px solid #DDD;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
-    border-radius:3px;
+    //-webkit-border-radius:3px;
+    //-moz-border-radius:3px;
+    //border-radius:3px;
     color:#888;
     text-decoration:none;
     line-height:36px;
@@ -952,16 +980,8 @@ textarea#comment{
     .wp-caption {
         font-size: 30px;
     }
-    .wp-caption-text{
-        display: block;
-    }
-    .wp-slogan{
-        display: none;
-    }
-    .wp-caption,
-    .wp-caption-text {
-        padding-left: 15px;
-        text-align: left;
+    .wp-slogan {
+        font-size: 16px;
     }
 
     article .post-thumb-img{
@@ -1006,16 +1026,18 @@ textarea#comment{
     }
 }
 
+@media (max-width: 768px) {
+    #primary {
+        padding: 0;
+    }
+}
+
 /* 中等屏幕（桌面显示器，大于等于 992px） */
 @media (min-width: 992px) {
-    .wp-caption,
-    .wp-caption-text {
-        padding-left: 30px;
-    }
     .wp-caption {
         font-size: 36px;
     }
-    .wp-caption-text {
+    .wp-slogan {
         font-size: 18px;
     }
     article .meta .meta-label{

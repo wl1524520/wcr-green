@@ -61,7 +61,10 @@
     ?>
     <div class="home-title">
         <div class="container">
-            <div class="row">
+            <h2 class="wp-caption"><?php bloginfo('name'); ?></h2>
+            <p class="wp-slogan"><?php echo $hello; ?></p>
+
+            <div style="display:none;" class="row">
                 <div class="col-xs-12 col-sm-6">
                     <h2 class="wp-caption"><?php bloginfo('name'); ?></h2>
                     <p class="wp-caption-text"><?php bloginfo('description'); ?></p>

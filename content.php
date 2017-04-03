@@ -14,13 +14,9 @@
         <?php if(function_exists('the_views')) { echo '<span class="meta-label"><span class="glyphicon glyphicon-bookmark"></span> 阅读：';  the_views() ; echo '</span>'; } ?>
     </div>
 
-    <div class="row">
+    <div class="post-excerpt">
         <?php if ( ! post_password_required() ) : ?>
-
-            <div class="col-xs-12 col-sm-12 col-md-12 post-excerpt">
-                <?php the_content('阅读全文...'); ?>
-            </div>
-
+        <?php the_content('阅读全文...'); ?>
         <?php endif; ?>
     </div>
 </article>

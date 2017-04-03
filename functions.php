@@ -207,6 +207,7 @@ function wcr_pagenavi($range = 9){
         $max_page = $wp_query->max_num_pages;
     }
     if($max_page > 1) {
+        echo '<div class="page-navi">';
         if(!$paged) {
             $paged = 1;
         }
@@ -251,6 +252,7 @@ function wcr_pagenavi($range = 9){
         if($paged != $max_page) {
             echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='跳转到最后一页'> 最后一页 </a>";
         }
+        echo '</div>';
     }
 }
 

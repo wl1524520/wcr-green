@@ -5,7 +5,7 @@
 get_header(); ?>
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-8 article-list">
+        <div id="primary" class="col-xs-12 col-sm-9 article-list">
             <?php 
             if(have_posts()) :  
                 while (have_posts()) :
@@ -15,10 +15,10 @@ get_header(); ?>
             else :
                     get_template_part('content', 'none');
             endif;
+            wcr_pagenavi(9);
             ?>
-            <div class="page-navi"><?php wcr_pagenavi(9); ?></div>
         </div>
-        <div class="col-xs-12 col-sm-4 sidebar-index">
+        <div id="primary" class="col-xs-12 col-sm-3 sidebar-index">
             <?php  get_sidebar(); ?>
         </div>
     </div>

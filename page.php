@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-8">
+        <div id="primary" class="col-xs-12 col-sm-9">
 
  <?php while (have_posts()) : the_post(); ?>
             <article class="singlepost">
@@ -26,7 +26,7 @@
 <?php endwhile; ?>		
 
         </div>
-        <div class="col-xs-12 col-sm-4 sidebar-page">
+        <div id="primary" class="col-xs-12 col-sm-3 sidebar-page">
             <?php  get_sidebar(); ?>
         </div>
     </div>

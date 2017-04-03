@@ -20,6 +20,7 @@ $(function(){
     /*
      * 让Bootstrap菜单恢复超链接功能
      */
+    /*
     if( ! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
         $(document).off('click.bs.dropdown.data-api');
         $('.navbar .dropdown').hover(function() {
@@ -30,6 +31,7 @@ $(function(){
             $(this).removeClass('open');
         });
     }
+    */
 
 });
 

@@ -12,12 +12,10 @@
         <?php if(function_exists('the_views')) { echo '<span class="meta-label"><span class="glyphicon glyphicon-bookmark"></span> 阅读：';  the_views() ; echo '</span>'; } ?>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 post-excerpt">
-            <a href="<?php the_permalink(); ?>">
-                <img class="img-responsive center-block" alt="<?php the_title(); ?>" src="<?php echo wcr_catch_image($post->ID); ?>" />
-            </a>
-            <p><a href="<?php the_permalink(); ?>" class="more-link">阅读全文&#8230;</a></p>
-        </div>
+    <div class="post-excerpt">
+        <a href="<?php the_permalink(); ?>">
+            <img class="img-responsive center-block" alt="<?php the_title(); ?>" src="<?php echo wcr_catch_image($post->ID); ?>" />
+        </a>
+        <p><a href="<?php the_permalink(); ?>" class="more-link">阅读全文&#8230;</a></p>
     </div>
 </article>
