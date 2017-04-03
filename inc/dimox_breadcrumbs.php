@@ -2,11 +2,9 @@
 /*
  * WordPress Breadcrumbs
  * author: Dimox
- * version: 2015.09.14
+ * version: 2017.21.01
  * license: MIT
- * URI: https://gist.githubusercontent.com/Dimox/5654092/raw/dda90c231d101973b11df60f12d8818e1a89e2d1/dimox_breadcrumbs.php
 */
-
 function dimox_breadcrumbs() {
 
 	/* === OPTIONS === */
@@ -21,43 +19,37 @@ function dimox_breadcrumbs() {
 
 	$wrap_before    = '<div class="breadcrumbs">'; // the opening wrapper tag
 	$wrap_after     = '</div><!-- .breadcrumbs -->'; // the closing wrapper tag
-	//$sep            = '›'; // separator between crumbs
-	$sep            = '<span class="glyphicon glyphicon-menu-right sep" aria-hidden="true"></span>'; // separator between crumbs
-	//$sep_before     = '<span class="sep">'; // tag before separator
-	//$sep_after      = '</span>'; // tag after separator
-	$sep_before     = ''; // tag before separator
-	$sep_after      = ''; // tag after separator
+	$sep            = '›'; // separator between crumbs
+	$sep_before     = '<span class="sep">'; // tag before separator
+	$sep_after      = '</span>'; // tag after separator
 	$show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
-	$show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
+	$show_on_home   = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
 	$show_current   = 1; // 1 - show current page title, 0 - don't show
 	$before         = '<span class="current">'; // tag before the current crumb
 	$after          = '</span>'; // tag after the current crumb
 	/* === END OF OPTIONS === */
 
 	global $post;
-	$home_link      = home_url('/');
-	//$link_before    = '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
+	$home_url       = home_url('/');
 	$link_before    = '<span>';
 	$link_after     = '</span>';
-	$link_attr      = ' itemprop="url"';
-	$link_in_before = '<span itemprop="title">';
+	$link_attr      = '';
+	$link_in_before = '<span>';
 	$link_in_after  = '</span>';
 	$link           = $link_before . '<a href="%1$s"' . $link_attr . '>' . $link_in_before . '%2$s' . $link_in_after . '</a>' . $link_after;
 	$frontpage_id   = get_option('page_on_front');
-    if(isset($post)) {
-	    $parent_id      = $post->post_parent;
-    }
+	$parent_id      = ($post) ? $post->post_parent : '';
 	$sep            = ' ' . $sep_before . $sep . $sep_after . ' ';
+	$home_link      = $link_before . '<a href="' . $home_url . '"' . $link_attr . ' class="home">' . $link_in_before . $text['home'] . $link_in_after . '</a>' . $link_after;
 
 	if (is_home() || is_front_page()) {
 
-		if ($show_on_home) echo $wrap_before . '<a href="' . $home_link . '">' . $text['home'] . '</a>' . $wrap_after;
-        //if ($show_on_home == 1) echo '<div class="breadcrumbs"><a href="' . $home_link . '">' . $text['home'] . '</a>'.$delimiter.'<span class="current">最新发表</span></div>';
+		if ($show_on_home) echo $wrap_before . $home_link . $wrap_after;
 
 	} else {
 
 		echo $wrap_before;
-		if ($show_home_link) echo sprintf($link, $home_link, $text['home']);
+		if ($show_home_link) echo $home_link;
 
 		if ( is_category() ) {
 			$cat = get_category(get_query_var('cat'), false);
@@ -104,7 +96,7 @@ function dimox_breadcrumbs() {
 			if ( get_post_type() != 'post' ) {
 				$post_type = get_post_type_object(get_post_type());
 				$slug = $post_type->rewrite;
-				printf($link, $home_link . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
+				printf($link, $home_url . $slug['slug'] . '/', $post_type->labels->singular_name);
 				if ($show_current) echo $sep . $before . get_the_title() . $after;
 			} else {
 				$cat = get_the_category(); $cat = $cat[0];

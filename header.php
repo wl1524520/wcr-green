@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 
     <!-- 奔跑吧，国产浏览器 -->
     <meta name="renderer" content="webkit">
@@ -63,25 +63,6 @@
         <div class="container">
             <h2 class="wp-caption"><?php bloginfo('name'); ?></h2>
             <p class="wp-slogan"><?php echo $hello; ?></p>
-
-            <div style="display:none;" class="row">
-                <div class="col-xs-12 col-sm-6">
-                    <h2 class="wp-caption"><?php bloginfo('name'); ?></h2>
-                    <p class="wp-caption-text"><?php bloginfo('description'); ?></p>
-                    <p class="wp-slogan"><?php echo $hello; ?></p>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <div class="media wp-media">
-                        <div class="media-left">
-                            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/avatar_64x64.png'); ?>" alt="<?php bloginfo('name'); ?>" class="img-circle">
-                        </div>
-                        <div id="hello-wanglu" class="media-body">
-                            <p><strong>欢迎来到戊辰人博客</strong></p>
-                            <p><?php echo $hello; ?></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <?php //endif; ?>
