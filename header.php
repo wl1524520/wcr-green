@@ -61,7 +61,7 @@
     ?>
     <div class="home-title">
         <div class="container">
-            <h2 class="wp-caption"><?php bloginfo('name'); ?></h2>
+            <h1 class="wp-caption"><?php bloginfo('name'); ?></h1>
             <p class="wp-slogan"><?php echo $hello; ?></p>
         </div>
     </div>

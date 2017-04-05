@@ -120,11 +120,16 @@ a:hover{
     color: #5cc85c;
     text-decoration: none;
 }
-h1, .h1 {
+h1,h2 {
     font-weight:700;
 }
-h2, .h2 {
-    font-weight:700;
+article h3 {
+    background: #eee;
+    padding:10px;
+    border-left: 4px solid #5cb85c;
+}
+article h4 {
+    font-weight: 700;
 }
 
 /*
@@ -190,8 +195,9 @@ a:focus, input:focus, select:focus, textarea:focus {
 }
 
 blockquote {
-    border-left: 5px solid #5cb85c;
-    background-color: #eee;
+    background: #f5f5f5;
+    padding: 8px;
+    border-left: 3px solid #e4e4e4;
 }
 
 // WordPress 系统内置类
@@ -232,6 +238,7 @@ blockquote {
 }
 .wp-caption {
     font-weight: 400;
+    font-size: 24px;
     text-align: center;
 }
 .wp-slogan {
@@ -295,9 +302,6 @@ blockquote {
 }
 article {
     margin-bottom:25px;
-}
-article h1{
-    margin: 8px 0;
 }
 article .meta {
     display: block;
@@ -526,6 +530,9 @@ article{
 article h1 a{
 	color: #1A1A1A;
 }
+article h2 a{
+	color: #1A1A1A;
+}
 .singlepost {
     background: #fff;
     padding: 15px 15px;
@@ -560,22 +567,15 @@ article h1 a{
 }
 
 article p, .singlepost p{
-    margin-bottom:8px;
-    font-size:16px;
     word-wrap: break-word;
     word-break: normal;
 }
-article ul, .singlepost ul, .singlepost ol{
-    margin-bottom:0px
-    font-size:15px;
-}
 article li{
     list-style: disc;
-    font-size:15px;
 }
 .singlepost .wcr_notice{
     margin:10px 0;
-    padding:10px 0;
+    padding-top:10px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
@@ -584,7 +584,7 @@ article li{
 }
 .singlepost .meta_tags_div .meta_tags{
     padding-top:20px;
-    font-size:13px;
+    font-size:14px;
 }
 
 /*
