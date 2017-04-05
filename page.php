@@ -12,6 +12,7 @@
             <article class="singlepost">
                 <div class="single-content">
                     <h1 class="text-center"><?php the_title(); ?></h1>
+                    <hr>
                     <?php the_content(); ?>
                 </div>
             </article>
