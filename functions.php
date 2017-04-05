@@ -120,7 +120,7 @@ function wcr_nav_menu() {
         'container_class'   => 'collapse navbar-collapse',
         'container_id'      => 'wcr-nav-menu',
         'menu'              => 'mainav',
-        'menu_class'        => 'nav navbar-nav',
+        'menu_class'        => 'nav navbar-nav navbar-right',
         'menu_id'           => 'top-nav',
         'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
         'fallback_cb'       => '',

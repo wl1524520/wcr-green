@@ -103,9 +103,8 @@ Text Domain: wcr-green
 body {
     padding-top: 51px;
     font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","冬青黑体","STHeiti","Microsoft YaHei",sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     background: #eceff1;
-    //background-color: #fff;
 }
 
 article,aside,details,figcaption,figure,footer,header,main,nav,section {
@@ -121,44 +120,12 @@ a:hover{
     color: #5cc85c;
     text-decoration: none;
 }
-/*
-h1, h2, h3, h4, h5, h6{
-    margin:25px 0 15px 0;
-    color: #505050;
-}
-*/
 h1, .h1 {
-	font-size:30px;
     font-weight:700;
 }
 h2, .h2 {
-	font-size:26px;
     font-weight:700;
 }
-h3, .h3 {
-	font-size:22px;
-}
-h4, .h4 {
-	font-size:18px;
-}
-h5, .h5 {
-	font-size:16px;
-}
-h6, .h6 {
-	font-size:16px;
-}
-
-/*
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #5cb85c;
-    margin:1em 0;
-    padding:0;
-}
-*/
-
 
 /*
  * 去除外发光
@@ -270,7 +237,6 @@ blockquote {
 .wp-slogan {
     display: block;
     font-size: 14px;
-    line-height: 1.3;
     font-style: italic;
     text-align: center;
 }
@@ -289,7 +255,6 @@ blockquote {
     padding: 0;
     color: #707070;
     font-size: 16px;
-    line-height: 1.3;
 }
 #hello-wanglu p {
     margin: 0;
@@ -306,8 +271,6 @@ blockquote {
 .breadcrumbs {
     margin-left:8px;
     margin-bottom: 3px;
-    font-size:14px;
-    line-height: 1.2;
 }
 .breadcrumbs .sep {
     color: #777;
@@ -345,7 +308,6 @@ article .meta {
 }
 article .meta .meta-label{
     font-size: 14px;
-    line-height: 1.3;
     display:block;
     color: #707070;
 }
@@ -364,15 +326,10 @@ article .more-link {
     display: block;
     padding: 6px 0;
     margin: 10px 0;
-    font-size: 16px;
-    line-height: 20px;
     text-align: left;
 }
 article .post-excerpt img {
     margin-bottom: 15px;
-}
-article .post-excerpt>p {
-    //text-indent: 2em;
 }
 
 /*
@@ -383,64 +340,65 @@ article .post-excerpt>p {
 .sidebar-page{
     display: none;
 }
-.pagesidebar aside {
-    background: #fff;
-    border: solid 1px #ccc;
+.pagesidebar .widget{
+    background-color: #fff;
+    font-size: 16px;
+    margin-bottom: 2em;
+    padding: 20px;
+    overflow: hidden;
+    border-color: #c9c9c9;
     -webkit-box-shadow: 0 4px 12px #ccc;
     -moz-box-shadow: 0 4px 12px #ccc;
     box-shadow: 0 4px 12px #ccc;
 }
-.pagesidebar .widget{
-    margin-bottom: 25px;
-}
-.pagesidebar .widget h3{
+.pagesidebar .widget-title {
     //font-family: 'robotomedium';
-    font-size: 16px;
-    background-color: #5cb85c;
-    color: #fff;
-    line-height:29px;
-    height:29px;
-    width:60%;
-    padding:0;
-    margin:0 30px 1px 0;
-    position:relative;
+    position: relative;
+    text-transform: uppercase;
 }
-.pagesidebar .widget h3:after{
-    content:'';
-    display:block;
-    width:0;
-    height:0;
-    position:absolute;
-    bottom:0;
-    right:-29px;
-    border-width:29px;
-    border-style:solid;
-    border-top-color:transparent;
-    border-bottom:0 none;
-    border-right:0 none;
-}
-.pagesidebar .widget-title:after{
+.pagesidebar .widget hr{
     border-color: #5cb85c;
+	border-width:4px;
+}
+.pagesidebar .widget ul,
+.pagesidebar .widget .tagcloud,
+.pagesidebar .widget .textwidget{
+	padding: 0 1em;
+}
+.pagesidebar .widget li {
+    font-size: 14px;
+    margin: 1px 0;
+    background-position: 0 5px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5em 0;
+}
+.pagesidebar .widget li:last-child {
+    border-bottom: none;
+}
+.pagesidebar .widget ul a {
+    font-size: 14px;
+    color: #505050;
+}
+.pagesidebar .widget ul a:hover {
+    color: #5cb85c;
+    text-decoration:none;
 }
 
 /*
  * 搜索框样式
  */
 /***************************/
-.search-form {
-    padding: 10px 5px;
-}
 .screen-reader-text {
-    display: none;
+    display:none;
 }
 .search-form label {
     width: 70%;
     margin: 0;
 }
 input[type=search] {
-    font-size:13px;
-    line-height:18px;
-    height:34px;
+    font-size:14px;
+    height:2.5em;
     width:100%;
     padding:7px 9px;
     border: 1px solid #ccc;
@@ -452,9 +410,8 @@ input[type=search] {
     border-radius: 3px;
     color: #fff;
     cursor: pointer;
-    font-size: 13px;
-    height: 34px;
-    line-height: 34px;
+    font-size: 14px;
+    height:2.5em;
     width:27%;
     padding: 0;
     margin: 0;
@@ -465,17 +422,6 @@ input[type=search] {
     border: 1px solid #5cc85c;
 }
 
-/**  sidebar widgets  **/
-.pagesidebar .widget{
-    border-color: #c9c9c9;
-    border-bottom-width:2px;
-    border-bottom-style:solid;
-}
-.pagesidebar .widget ul,
-.pagesidebar .widget .tagcloud,
-.pagesidebar .widget .textwidget{
-	padding: 10px;
-}
 /*
  * 日历表格样式
  */
@@ -502,7 +448,7 @@ input[type=search] {
 }
 #wp-calendar td,
 #wp-calendar th {
-    font-size: 16px;
+    //font-size: 16px;
     padding: 10px;
     text-align: center;
 }
@@ -515,35 +461,6 @@ input[type=search] {
 .pagesidebar .widget .tagcloud a:hover{
     color: #5cb85c;
 }
-.pagesidebar .widget ul li ul{
-	padding: 0;
-}
-.pagesidebar .widget ul li {
-    margin: 1px 0;
-    background-image: url(images/category_list_green.png);
-    background-position: 0 5px;
-    background-repeat: no-repeat;
-    padding-left:15px;
-}
-.pagesidebar .zhandian ul li {
-    font-size: 13px;
-    margin: 5px 0;
-}
-.pagesidebar .widget ul a {
-    font-size: 13px;
-    line-height: 1.4;
-    color: #505050;
-}
-.pagesidebar .widget ul a:hover {
-    color: #5cb85c;
-    text-decoration:none;
-}
-.pagesidebar .widget ul .rssSummary, .pagesidebar .widget ul .rsswidget, .pagesidebar .widget ul .rss-date, .pagesidebar .widget ul cite {
-    line-height: 1.4;
-}
-/*
- * 日历样式
- */
 .pagesidebar .widget #calendar_wrap caption{
     font-size: 18px;
     padding-top: 5px;
@@ -560,7 +477,7 @@ input[type=search] {
 }
 
 .pagesidebar .widget .widget-title {
-        font-style:italic;
+    font-style:italic;
 }
 .pagesidebar .widget .widget-title .rsswidget {
     color:#ffffff;
@@ -571,24 +488,13 @@ input[type=search] {
 .pagesidebar .widget p, .pagesidebar .widget span{
 	opacity: 0.65;
 }
-/*
-.pagesidebar .widget img {
-	height:auto;
-	margin: 5px 0;
-}
-*/
 .pagesidebar .widget select, .pagesidebar .widget textarea {
 	margin:15px 0;
 	width:100%;
 	padding:5px;
 }
-.pagesidebar .widget, .pagesidebar .searchform_block{
-	margin-bottom:15px;
-}
-.pagesidebar .widget hr{
-	border-width:2px;
-	margin:0;
-}
+
+/*
 .pagesidebar .widget .inner{
 	padding:10px
 }
@@ -608,6 +514,8 @@ input[type=search] {
 	-khtml-opacity: 1;
 	opacity: 1;
 }
+*/
+
 
 /*
  * 文章和页面样式
@@ -632,9 +540,6 @@ article h1 a{
 .singlepost .single-content img {
     margin-bottom: 15px;
 }
-.singlepost .single-content>p {
-    //text-indent: 2em;
-}
 .singlepost .single-content a:hover{
     text-decoration: underline;
 }
@@ -643,7 +548,6 @@ article h1 a{
 }
 .singlepost input {
     font-size:13px;
-    line-height:18px;
     height:34px;
     padding:7px 9px;
     border: 1px solid #ccc;
@@ -655,16 +559,11 @@ article h1 a{
     border: 1px solid #5cb85c;
 }
 
-
 article p, .singlepost p{
     margin-bottom:8px;
     font-size:16px;
-    line-height: 1.4;
     word-wrap: break-word;
     word-break: normal;
-}
-article strong {
-    line-height:2;
 }
 article ul, .singlepost ul, .singlepost ol{
     margin-bottom:0px
@@ -673,7 +572,6 @@ article ul, .singlepost ul, .singlepost ol{
 article li{
     list-style: disc;
     font-size:15px;
-    line-height: 1.3;
 }
 .singlepost .wcr_notice{
     margin:10px 0;
@@ -713,26 +611,12 @@ article li{
 .wp-related-content{
     margin: 10px;
 }
+.wp-related-content h4{
+    font-size: 14px;
+}
 .wp-related-content ul {
     display: block;
     padding-left: 0;
-}
-.wp-related-content ul li {
-    display: block;
-    float: none;
-    list-style: none;
-    width: 100%;
-    padding: 5px;
-    background: #fff;
-}
-.wp-related-content ul li:hover {
-    background: #ddd;
-}
-.wp-related-content ul li span {
-    display: block;
-    font-size: 14px;
-    text-align: center;
-    overflow: hidden;
 }
 .wp-related-content ul:after {
     content: ".";
@@ -740,6 +624,23 @@ article li{
     height: 0;
     clear: both;
     visibility: hidden;
+}
+.wp-related-content li {
+    display: block;
+    float: none;
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+}
+.wp-related-content li:hover {
+    background: #ddd;
+}
+.wp-related-content li span {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
 }
 
 
@@ -754,11 +655,7 @@ article li{
     box-shadow: 0 4px 12px #ccc;
 }
 .comments h3 {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 8px;
+    padding: 10px;
     background-color: #f5f5f5;
     border-left: 6px solid #5cb85c;
 }
@@ -767,9 +664,6 @@ article li{
 }
 .comments ul.children {
     padding-left: 20px;
-}
-.comments ul li{
-    list-style: none;
 }
 .comments article {
     position: relative;
@@ -788,18 +682,13 @@ article li{
     width:32px;
     height:32px;
 }
-/*
-*/
-// 评论form区
-.comments .comment-form {
-    margin-top: 10px;
-}
+
 .comments .comment-form .submit,
 .comments .comment-form #submit {
     //font-family: 'robotoregular';
     background-color: #5cb85c;
     color: #fff;
-    font-size:16px;
+    font-size: 1.1em;
     text-align:center;
     vertical-align:middle;
     cursor:pointer;
@@ -814,7 +703,6 @@ article li{
     -opera-border-radius:3px;
     -o-border-radius:3px;
     -border-radius:3px;
-    //behavior: url(css/PIE.htc);
     *zoom:1
 }
 .comments .comment-form .submit:hover,
@@ -839,7 +727,6 @@ textarea#comment{
 .text, .textarea, input#author, input#email, input#url, textarea#comment{
     //font-family: 'robotoregular';
     font-size:13px;
-    line-height:18px;
     display:block;
     border-style:solid;
     border-width:1px;
@@ -860,7 +747,6 @@ textarea#comment{
 }
 .textarea, textarea#comment{
     height:76px;
-    line-height:18px;
     resize: none;
     overflow:auto;
 }
@@ -881,14 +767,11 @@ textarea#comment{
 }
 .page-navi a{
     display: inline;
-    height:36px;
-    border:1px solid #DDD;
-    //-webkit-border-radius:3px;
-    //-moz-border-radius:3px;
-    //border-radius:3px;
     color:#888;
-    text-decoration:none;
+    height:36px;
     line-height:36px;
+    border:1px solid #DDD;
+    text-decoration:none;
     margin:2px;
     padding:3px 8px;
 }
@@ -908,7 +791,6 @@ textarea#comment{
  */
 #footer {
     background: #404040;
-    //border-top: 1px solid #b70000;
     padding: 10px 0;
 }
 #footer p {
@@ -918,14 +800,12 @@ textarea#comment{
 #footer p, #footer a {
     font-size: 16px;
     color: #eee;
-    line-height: 1.3;
 }
 #footer a:hover {
     color: #5cb85c;
 }
 #footer span {
     display: block;
-    line-height: 1.3;
 }
 
 /*
@@ -973,6 +853,9 @@ textarea#comment{
 /* 小屏幕（平板，大于等于 768px） */
 /* width more than 768px */
 @media (min-width: 768px) {
+    .navbar-right {
+        margin-right: 0;
+    }
     .wp-media {
         display: block;
     }
@@ -985,12 +868,6 @@ textarea#comment{
 
     article .post-thumb-img{
         max-width: 242px;
-    }
-
-    .pagesidebar .widget ul,
-    .pagesidebar .widget .tagcloud,
-    .pagesidebar .widget .textwidget{
-        padding: 10px 10px 10px 20px;
     }
 
     #wp-calendar td,
@@ -1021,7 +898,6 @@ textarea#comment{
     }
     #footer span {
         display: inline;
-        line-height: 1.3;
     }
 }
 
