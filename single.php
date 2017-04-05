@@ -45,8 +45,8 @@
                         } 
                     ?>
                 </div>
-                <?php comments_template(); ?>
             </article>
+            <?php comments_template(); ?>
 <?php endwhile; ?>
 
         </div>

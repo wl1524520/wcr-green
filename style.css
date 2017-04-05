@@ -107,11 +107,6 @@ body {
     background: #eceff1;
     //background-color: #fff;
 }
-/*
-.container {
-    background-color: #fff;
-}
-*/
 
 article,aside,details,figcaption,figure,footer,header,main,nav,section {
     display: block;
@@ -750,9 +745,13 @@ article li{
 
 /**  comments  **/
 .comments{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    background: #fff;
+    padding: 15px 15px;
+    margin-bottom: 25px;
+    border: solid 1px #ccc;
+    -webkit-box-shadow: 0 4px 12px #ccc;
+    -moz-box-shadow: 0 4px 12px #ccc;
+    box-shadow: 0 4px 12px #ccc;
 }
 .comments h3 {
     margin: 0;

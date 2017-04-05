@@ -56,8 +56,8 @@ function wcr_setup() {
      * 后台增加菜单设置功能
      */
 	register_nav_menus( array(
-		'primary' => 'Primary Menu',
-		'social'  => 'Social Links Menu',
+		'primary' => '主菜单',
+		//'social'  => 'Social Links Menu',
 	) );
 
 	/*
