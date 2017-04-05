@@ -570,8 +570,11 @@ article p, .singlepost p{
     word-wrap: break-word;
     word-break: normal;
 }
-article li{
+article ul li{
     list-style: disc;
+}
+article ol li{
+    list-style: decimal;
 }
 .singlepost .wcr_notice{
     margin:10px 0;
