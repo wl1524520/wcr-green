@@ -207,53 +207,66 @@ function wcr_pagenavi($range = 9){
         $max_page = $wp_query->max_num_pages;
     }
     if($max_page > 1) {
-        echo '<div class="page-navi">';
+        echo '<nav aria-label="Page navigation"><ul class="pagination">';
         if(!$paged) {
             $paged = 1;
         }
-
         if($paged != 1) {
-            echo "<a href='" . get_pagenum_link(1) . "' class='extend' title='跳转到首页'> 返回首页 </a>";
+            echo "<li><a href='" . get_pagenum_link(1) . "' aria-label='Previous'><span aria-hidden='true'>首页</span></a></li>";
         }
+        echo '<li>';
         previous_posts_link(' 上一页 ');
+        echo '</li>';
 
         if($max_page > $range) {
             if($paged < $range) {
                 for($i = 1; $i <= ($range + 1); $i++) {
-                    echo "<a href='" . get_pagenum_link($i) ."'";
+                    echo "<li";
                     if($i==$paged)
-                        echo " class='current'";
-                    echo ">$i</a>";
+                        echo " class='active'";
+                    echo "><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
                 }
             } elseif ($paged >= ($max_page - ceil(($range/2)))) {
                 for($i = $max_page - $range; $i <= $max_page; $i++) {
-                    echo "<a href='" . get_pagenum_link($i) ."'";
+                    echo "<li";
                     if($i==$paged)
-                        echo " class='current'";
-                    echo ">$i</a>";
+                        echo " class='active'";
+                    echo "><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
                 }
             } elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))) {
                 for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++) {
-                    echo "<a href='" . get_pagenum_link($i) ."'";
-                    if($i==$paged) 
-                        echo " class='current'";
-                    echo ">$i</a>";
-                    }
+                    echo "<li";
+                    if($i==$paged)
+                        echo " class='active'";
+                    echo "><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
+                }
             }
         } else {
             for($i = 1; $i <= $max_page; $i++) {
-                echo "<a href='" . get_pagenum_link($i) ."'";
+                echo "<li";
                 if($i==$paged)
-                    echo " class='current'";
-                echo ">$i</a>";
+                    echo " class='active'";
+                echo "><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
             }
         }
+        echo '<li>';
         next_posts_link(' 下一页 ');
+        echo '</li>';
         if($paged != $max_page) {
-            echo "<a href='" . get_pagenum_link($max_page) . "' class='extend' title='跳转到最后一页'> 最后一页 </a>";
+            echo "<li><a href='" . get_pagenum_link($max_page) . "' aria-label='Next'><span aria-hidden='true'>尾页</span></a></li>";
         }
-        echo '</div>';
+        echo '</ul></nav>';
     }
+}
+function wcr_pagenavi_m(){
+    echo '<nav aria-label="..."><ul class="pager">';
+    echo '<li class="previous">';
+        previous_posts_link(' 前一页 ');
+    echo '</li>';
+    echo '<li class="next">';
+        next_posts_link(' 后一页 ');
+    echo '</li>';
+    echo '</ul></nav>';
 }
 
 /*

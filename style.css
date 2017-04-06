@@ -295,7 +295,7 @@ blockquote {
 .article-list article{
     padding: 15px 15px;
     background: #fff;
-    border: solid 1px #ccc;
+    //border: solid 1px #ccc;
     -webkit-box-shadow: 0 4px 12px #ccc;
     -moz-box-shadow: 0 4px 12px #ccc;
     box-shadow: 0 4px 12px #ccc;
@@ -350,7 +350,7 @@ article .post-excerpt img {
     margin-bottom: 2em;
     padding: 20px;
     overflow: hidden;
-    border-color: #c9c9c9;
+    //border-color: #c9c9c9;
     -webkit-box-shadow: 0 4px 12px #ccc;
     -moz-box-shadow: 0 4px 12px #ccc;
     box-shadow: 0 4px 12px #ccc;
@@ -524,9 +524,6 @@ input[type=search] {
 /*
  * 文章和页面样式
  */
-article{
-    border-bottom: 2px dotted #bcbcbc;
-}
 article h1 a{
 	color: #1A1A1A;
 }
@@ -756,6 +753,34 @@ textarea#comment{
 /*
  * 分页导航
  */
+#pagenavi {
+    display:none;
+    padding: 5px 15px 0 15px;
+    margin-bottom: 25px;
+    background: #fff;
+    //border: solid 1px #ccc;
+    -webkit-box-shadow: 0 4px 12px #ccc;
+    -moz-box-shadow: 0 4px 12px #ccc;
+    box-shadow: 0 4px 12px #ccc;
+}
+#pagenavi a {
+    color:#5cb85c;
+}
+#pagenavi .active a {
+    background-color:#5cb85c;
+    background:#5cb85c;
+    border-color:#5cb85c;
+}
+#pagenavi .active a {
+    color:#fff;
+    border-color:#5cb85c;
+}
+#pagenavi-m {
+    display:block;
+    padding: 0 5px;
+    margin-bottom: 25px;
+}
+/*
 .page-navi{
     background: #fff;
     padding: 8px 0;
@@ -787,6 +812,7 @@ textarea#comment{
     border:1px solid #5cb85c;
     color:#fff;
 }
+*/
 
 /*
  * #footer样式
@@ -897,6 +923,12 @@ textarea#comment{
         position: absolute;
         top: 4px;
         right: 4px;
+    }
+    #pagenavi {
+        display:block;
+    }
+    #pagenavi-m {
+        display:none;
     }
     #footer span {
         display: inline;

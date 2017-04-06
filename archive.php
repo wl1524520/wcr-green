@@ -14,8 +14,13 @@ get_header(); ?>
             else :
                     get_template_part( 'content', 'none' );
             endif;
-            wcr_pagenavi(9);
             ?>
+            <div id="pagenavi" class="text-center">
+                <?php wcr_pagenavi(9); ?>
+            </div>
+            <div id="pagenavi-m" class="text-center">
+                <?php wcr_pagenavi_m(); ?>
+            </div>
         </div>
         <div id="primary" class="col-xs-12 col-sm-3 sidebar-index">
             <?php  get_sidebar(); ?>
