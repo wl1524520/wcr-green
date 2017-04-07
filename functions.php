@@ -211,9 +211,7 @@ function wcr_pagenavi($range = 9){
         if(!$paged) {
             $paged = 1;
         }
-        if($paged != 1) {
-            echo "<li><a href='" . get_pagenum_link(1) . "' aria-label='Previous'><span aria-hidden='true'>首页</span></a></li>";
-        }
+        echo "<li><a href='" . get_pagenum_link(1) . "' aria-label='Previous'><span aria-hidden='true'>第一页</span></a></li>";
         echo '<li>';
         previous_posts_link(' 上一页 ');
         echo '</li>';
@@ -252,9 +250,7 @@ function wcr_pagenavi($range = 9){
         echo '<li>';
         next_posts_link(' 下一页 ');
         echo '</li>';
-        if($paged != $max_page) {
-            echo "<li><a href='" . get_pagenum_link($max_page) . "' aria-label='Next'><span aria-hidden='true'>尾页</span></a></li>";
-        }
+        echo "<li><a href='" . get_pagenum_link($max_page) . "' aria-label='Next'><span aria-hidden='true'>最末页</span></a></li>";
         echo '</ul></nav>';
     }
 }
