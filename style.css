@@ -13,7 +13,6 @@ Text Domain: wcr-green
 
 
 /**  fonts  **/
-/*
 @font-face {
     font-family: 'robotoregular';
     src: url('css/fonts/Roboto-Regular-webfont.eot');
@@ -64,7 +63,6 @@ Text Domain: wcr-green
     font-weight: normal;
     font-style: normal;
 }
-*/
 
 /*
  * main color : #5cb85c
@@ -121,9 +119,10 @@ a:hover{
     text-decoration: none;
 }
 h1,h2 {
-    font-weight:700;
+    font-family: 'robotoblack';
 }
 article h3 {
+    font-family: 'robotomedium';
     background: #eee;
     padding:10px;
     border-left: 6px solid #5cb85c;
