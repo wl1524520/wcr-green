@@ -58,6 +58,7 @@
         } else {
             $hello = '不记初心，方得始终。';
         }
+        $hello = '累了就休息一下，但千万不要放弃！';
     ?>
     <div class="home-title">
         <div class="container">

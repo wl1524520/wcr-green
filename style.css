@@ -126,7 +126,7 @@ h1,h2 {
 article h3 {
     background: #eee;
     padding:10px;
-    border-left: 4px solid #5cb85c;
+    border-left: 6px solid #5cb85c;
 }
 article h4 {
     font-weight: 700;
@@ -194,9 +194,10 @@ a:focus, input:focus, select:focus, textarea:focus {
 }
 
 blockquote {
-    background: #f5f5f5;
-    padding: 8px;
-    border-left: 3px solid #e4e4e4;
+    background: #f7f7f7;
+    padding: 20px;
+    border-left: 4px solid #b4b4b4;
+    word-break: break-world;
 }
 
 // WordPress 系统内置类
