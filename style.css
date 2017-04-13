@@ -38,6 +38,7 @@ Text Domain: wcr-green
     font-weight: normal;
     font-style: normal;
 }
+/*
 @font-face {
     font-family: 'robotoitalic';
     src: url('css/webfonts/roboto-italic-webfont.eot');
@@ -49,6 +50,7 @@ Text Domain: wcr-green
     font-weight: normal;
     font-style: normal;
 }
+*/
 @font-face {
     font-family: 'robotolight';
     src: url('css/webfonts/roboto-light-webfont.eot');
@@ -71,6 +73,7 @@ Text Domain: wcr-green
     font-weight: normal;
     font-style: normal;
 }
+/*
 @font-face {
     font-family: 'robotomedium_italic';
     src: url('css/webfonts/roboto-mediumitalic-webfont.eot');
@@ -82,6 +85,7 @@ Text Domain: wcr-green
     font-weight: normal;
     font-style: normal;
 }
+*/
 @font-face {
     font-family: 'robotoregular';
     src: url('css/webfonts/roboto-regular-webfont.eot');
@@ -268,7 +272,7 @@ blockquote {
     text-align: center;
 }
 .wp-slogan {
-    font-family: 'robotoitalic';
+    font-family: 'robotoregular';
     font-style: italic;
     display: block;
     font-size: 14px;
@@ -382,7 +386,7 @@ article .post-excerpt img {
     box-shadow: 0 4px 12px #ccc;
 }
 .pagesidebar h3.widget-title {
-    font-family: 'robotomedium_italic';
+    font-family: 'robotomedium';
     font-style: italic;
 }
 .pagesidebar .widget hr{
