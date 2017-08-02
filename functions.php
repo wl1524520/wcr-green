@@ -127,12 +127,10 @@ function wcr_nav_menu() {
         'walker'            => new Bootstrap_Walker(),
         'depth'             => 2
     );
-    if(function_exists('wpwcr_nav_menu') && has_nav_menu('primary')) {
-        // 使用缓存
-        wpwcr_nav_menu($defaults);
-    } else {
+    if(has_nav_menu('primary')) {
         wp_nav_menu($defaults);
     }
+
     /*
     if (function_exists('wp_nav_menu') && has_nav_menu('primary')) {
         wp_nav_menu($defaults);
@@ -201,12 +199,13 @@ endif;
 /*
  * 分页导航代码
  */
-function wcr_pagenavi($range = 9){
+function wcr_pagenavi($range = 9) {
 	global $paged, $wp_query;
 	if ( !isset($max_page) ) {
         $max_page = $wp_query->max_num_pages;
     }
     if($max_page > 1) {
+        echo '<div id="pagenavi" class="text-center">';
         echo '<nav aria-label="Page navigation"><ul class="pagination">';
         if(!$paged) {
             $paged = 1;
@@ -252,9 +251,11 @@ function wcr_pagenavi($range = 9){
         echo '</li>';
         echo "<li><a href='" . get_pagenum_link($max_page) . "' aria-label='Next'><span aria-hidden='true'>最末页</span></a></li>";
         echo '</ul></nav>';
+        echo '</div>';
     }
 }
-function wcr_pagenavi_m(){
+function wcr_pagenavi_m() {
+    echo '<div id="pagenavi-m" class="text-center">';
     echo '<nav aria-label="..."><ul class="pager">';
     echo '<li class="previous">';
         previous_posts_link(' 前一页 ');
@@ -263,6 +264,7 @@ function wcr_pagenavi_m(){
         next_posts_link(' 后一页 ');
     echo '</li>';
     echo '</ul></nav>';
+    echo '</div>';
 }
 
 /*
