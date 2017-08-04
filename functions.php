@@ -4,7 +4,6 @@
  */
 require get_template_directory() . '/inc/BootstrapWalker.class.php';
 require get_template_directory() . '/inc/wcr_widget.class.php';
-require get_template_directory() . '/inc/wcr_widget_wx.class.php';
 require get_template_directory() . '/inc/wcr_meta.class.php';
 require get_template_directory() . '/inc/wcr_mail.php';
 require get_template_directory() . '/inc/dimox_breadcrumbs.php';
