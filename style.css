@@ -105,7 +105,7 @@ Text Domain: wcr-green
  */
 ::-webkit-scrollbar{
     width:12px;
-    height:16px;
+    height:8px;
 }
 ::-webkit-scrollbar-track {
     background-color:#fff;
