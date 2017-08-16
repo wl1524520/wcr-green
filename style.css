@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*
 Theme Name: Wcr Green
 Theme URI: http://wanglu.info/
@@ -604,6 +605,30 @@ article ol li{
 .singlepost .meta_tags_div .meta_tags{
     padding-top:20px;
     font-size:14px;
+}
+
+/*
+ * 归档页面
+ */ 
+#archives {
+    padding: 15px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 4px 12px #ccc;
+    -moz-box-shadow: 0 4px 12px #ccc;
+    box-shadow: 0 4px 12px #ccc;
+}
+#archives .al_year {
+    text-align: center;
+    font-weight: 700;
+}
+#archives .al_mon {
+    padding-left: 10px;
+    border-left: 5px solid #5cb85c;
+    font-weight: 700;
+}
+#archives .al_day {
+    padding-left: 5px;
 }
 
 /*

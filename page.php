@@ -8,16 +8,16 @@
     <div class="row">
         <div id="primary" class="col-xs-12 col-sm-9">
 
- <?php while (have_posts()) : the_post(); ?>
             <article class="singlepost">
                 <div class="single-content">
+                    <?php if (have_posts()) : the_post(); ?>
                     <h1 class="text-center"><?php the_title(); ?></h1>
                     <hr>
                     <?php the_content(); ?>
+                    <?php endif; ?>		
                 </div>
             </article>
             <?php comments_template(); ?>
-<?php endwhile; ?>		
 
         </div>
         <div id="primary" class="col-xs-12 col-sm-3 sidebar-page">
