@@ -3,7 +3,6 @@
  * 底部模板
  *
  */
-global $wcr_config;
 ?>
 
 <footer id="footer">
@@ -17,7 +16,7 @@ global $wcr_config;
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="<?php echo esc_url(get_template_directory_uri() . '/statics/bootstrap-3.3.5/js/bootstrap.min.js'); ?>"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="<?php echo esc_url(get_template_directory_uri() . '/js/common.js'); ?>"></script>
 <!-- 极简社会化分享插件 https://www.qinco.net/basicshare -->
 <script src="<?php echo esc_url(get_template_directory_uri() . '/statics/basic-share/0.2.min.js'); ?>"></script>

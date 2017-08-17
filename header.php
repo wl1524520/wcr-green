@@ -17,12 +17,12 @@
     <meta name="baidu-site-verification" content="7j7FIKv351" />
 
     <!-- Bootstrap -->
-    <link href="<?php echo esc_url(get_template_directory_uri() . '/statics/bootstrap-3.3.5/css/bootstrap.min.css'); ?>" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-        <script src="<?php echo esc_url(get_template_directory_uri() . '/statics/html5shiv.min.js'); ?>"></script>
-        <script src="<?php echo esc_url(get_template_directory_uri() . '/statics/respond.min.js'); ?>"></script>
+        <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
     <?php wp_head(); ?>
@@ -50,7 +50,7 @@
     </header>
 
     <?php //if ( is_home() || is_front_page() ) : ?>
-    <?php 
+    <?php
         if(function_exists('hello_wanglu')) {
             // hello-wanglu 插件
             // 插件地址：https://github.com/wl1524520/hello-wanglu.git
