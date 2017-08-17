@@ -4,13 +4,13 @@ function get_the_link_items($id = null){
     $bookmarks = get_bookmarks('orderby=date&category=' .$id );
     $output = '';
     if ( !empty($bookmarks) ) {
-        //$output .= '<ul class="link-items fontSmooth">';
+        $output .= '<div class="link-items>';
         foreach ($bookmarks as $bookmark) {
-            $output .=  '<p class="link-item"><a class="link-item-inner effect-apollo" href="'
+            $output .=  '<p><a class="" href="'
                         . $bookmark->link_url . '" title="' . $bookmark->link_description
-                        . '" target="_blank" ><span class="sitename">'. $bookmark->link_name .'</span></a>: '.$bookmark->link_description.'</p>';
+                        . '" target="_blank" >'. $bookmark->link_name .'</a> : '.$bookmark->link_description.'</p>';
         }
-        //$output .= '</ul>';
+        $output .= '</div>';
     }
     return $output;
 }
