@@ -8,7 +8,7 @@
     <div class="row">
         <div id="primary" class="col-xs-12 col-md-12">
 
- <?php while (have_posts()) : the_post(); ?>
+            <?php while (have_posts()) : the_post(); ?>
             <article class="singlepost">
                 <h1><?php if(get_the_title($post->ID)) { the_title(); } else { the_time( get_option( 'date_format' ) ); } ?></h1>
                 <div class="meta">
@@ -47,7 +47,7 @@
                 </div>
             </article>
             <?php comments_template(); ?>
-<?php endwhile; ?>
+            <?php endwhile; ?>
 
         </div>
     </div>
