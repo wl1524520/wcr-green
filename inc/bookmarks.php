@@ -23,6 +23,7 @@ function get_link_items(){
     if ( !empty($linkcats) ) {
         foreach( $linkcats as $linkcat){
             $result .=  '<h2 class="link-title text-center">'.$linkcat->name.'</h2>';
+            $result .= '<hr>';
             if( $linkcat->description ) $result .= '<div class="link-description">' . $linkcat->description . '</div>';
             $result .=  get_the_link_items($linkcat->term_id);
         }
