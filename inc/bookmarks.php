@@ -4,7 +4,7 @@ function get_the_link_items($id = null){
     $bookmarks = get_bookmarks('orderby=date&category=' .$id );
     $output = '';
     if ( !empty($bookmarks) ) {
-        $output .= '<div class="link-items>';
+        $output .= '<div class="link-items">';
         foreach ($bookmarks as $bookmark) {
             $output .=  '<p><a class="" href="'
                         . $bookmark->link_url . '" title="' . $bookmark->link_description
