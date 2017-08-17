@@ -1054,5 +1054,6 @@ textarea#comment{
 .effect-apollo:hover::before{-webkit-transform:scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);transform:scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0)}
 */
 .link-items p {
+    font-size: 16px;
     padding: 0.3em;
 }
