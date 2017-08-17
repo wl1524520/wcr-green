@@ -6,15 +6,12 @@ Template Name: 归档模板
 
 <div class="container">
     <div class="row">
-        <div id="primary" class="col-xs-12 col-sm-9">
+        <div id="primary" class="col-xs-12 col-md-12">
 
         <div id="archives">
         <?php wcr_archives_list(); ?>
         </div>
 
-        </div>
-        <div id="primary" class="col-xs-12 col-sm-3 sidebar-page">
-            <?php  get_sidebar(); ?>
         </div>
     </div>
 </div>

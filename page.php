@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <div id="primary" class="col-xs-12 col-sm-9">
+        <div id="primary" class="col-xs-12 col-md-12">
 
             <article class="singlepost">
                 <div class="single-content">
@@ -14,14 +14,11 @@
                     <h1 class="text-center"><?php the_title(); ?></h1>
                     <hr>
                     <?php the_content(); ?>
-                    <?php endif; ?>		
+                    <?php endif; ?>
                 </div>
             </article>
             <?php comments_template(); ?>
 
-        </div>
-        <div id="primary" class="col-xs-12 col-sm-3 sidebar-page">
-            <?php  get_sidebar(); ?>
         </div>
     </div>
 </div>

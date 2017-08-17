@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <div id="primary" class="col-xs-12 col-sm-9">
+        <div id="primary" class="col-xs-12 col-md-12">
 
  <?php while (have_posts()) : the_post(); ?>
             <article class="singlepost">
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="wp-related-content">
-                    <?php 
+                    <?php
                         if ( function_exists('wpjam_related_posts') ) {
                             $args = array(
                                 'class'=>'',                    //外层ul的class。
@@ -42,16 +42,13 @@
                                 'number_per_row'=>4             //如果设置为缩略图为横排，每行个数
                             );
                             wpjam_related_posts(4, $args);
-                        } 
+                        }
                     ?>
                 </div>
             </article>
             <?php comments_template(); ?>
 <?php endwhile; ?>
 
-        </div>
-        <div id="primary" class="col-xs-12 col-sm-3 sidebar-single">
-            <?php get_sidebar(); ?>
         </div>
     </div>
 </div>

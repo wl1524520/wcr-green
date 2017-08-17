@@ -6,15 +6,12 @@ Template Name: 友情链接
 
 <div class="container">
     <div class="row">
-        <div id="primary" class="col-xs-12 col-sm-9">
+        <div id="primary" class="col-xs-12 col-md-12">
 
         <div id="archives">
         <?php echo get_link_items(); ?>
         </div>
 
-        </div>
-        <div id="primary" class="col-xs-12 col-sm-3 sidebar-page">
-            <?php  get_sidebar(); ?>
         </div>
     </div>
 </div>
