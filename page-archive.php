@@ -9,7 +9,7 @@ Template Name: 归档模板
         <div id="primary" class="col-xs-12 col-md-12">
 
         <div id="archives">
-        <?php wcr_archives_list(); ?>
+        <?php if(function_exists('wcr_archives_list')) wcr_archives_list(); ?>
         </div>
 
         </div>

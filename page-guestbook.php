@@ -13,17 +13,14 @@ Template Name: 留言
                     <?php if (have_posts()) : the_post(); ?>
                     <h1 class="text-center"><?php the_title(); ?></h1>
                     <hr>
-                    <ul>
-                        <li>日志数量：<?php
-                        $count_posts = wp_count_posts();
-                        echo $published_posts = $count_posts->publish;
-                        ?> 篇</li>
-                        <li>评论数量：<?php echo get_comments(array('count'=>true)); ?> 条</li>
-                        <li>标签数量：<?php echo $count_tags = wp_count_terms('post_tag'); ?> 个</li>
-                        <li>建站日期：2014年11月11日</li>
-                        <li>运行天数：<?php echo floor((time()-strtotime("2014-11-11"))/86400) . ' 天'; ?></li>
-                    </ul>
-                    <?php endif; ?>		
+                    <?php
+                    $count_posts = wp_count_posts();
+                    $published_posts = $count_posts->publish;
+                    ?>
+                    <p>本博客于2014年11月11日建立，据不完全统计，博主已经写了<?php echo $published_posts ?>篇文章，
+                        收获了<?php echo get_comments(array('count'=>true)); ?>条评论，
+                        一共坚持了<?php echo floor((time()-strtotime("2014-11-11"))/86400); ?>天。</p>
+                    <?php endif; ?>
                 </div>
             </article>
             <?php comments_template(); ?>
