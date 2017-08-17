@@ -3,10 +3,10 @@
  * 功能函数文件
  */
 require get_template_directory() . '/inc/BootstrapWalker.class.php';
-require get_template_directory() . '/inc/archive-list.php';
-require get_template_directory() . '/inc/bookmarks.php';
-require get_template_directory() . '/inc/wcr_mail.php';
-require get_template_directory() . '/inc/dimox_breadcrumbs.php';
+#require get_template_directory() . '/inc/archive-list.php';
+#require get_template_directory() . '/inc/bookmarks.php';
+#require get_template_directory() . '/inc/wcr_mail.php';
+#require get_template_directory() . '/inc/dimox_breadcrumbs.php';
 
 if (! function_exists('wcr_setup')) :
 function wcr_setup() {
