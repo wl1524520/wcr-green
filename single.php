@@ -27,7 +27,7 @@
                     ?>
                 </div>
                 <div class="wcr_share">
-                    <button class='basicShareBtn'>点击分享到微博</button>
+                    <button class='basicShareBtn' data-sharePic='<?php echo wcr_catch_image($post->ID); ?>'>分享</button>
                 </div>
 
                 <div class="wp-related-content">
