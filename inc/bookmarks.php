@@ -10,7 +10,7 @@ function get_the_link_items($id = null){
             if ($bookmark->link_description) {
                 $link_description = ' : ' . $bookmark->link_description;
             }
-            $output .=  '<p class="text-center"><a href="' . $bookmark->link_url . '" target="_blank" >'
+            $output .=  '<p><a href="' . $bookmark->link_url . '" target="_blank" >'
                         . $bookmark->link_name .'</a>' . $link_description . '</p>';
         }
         $output .= '</div>';
@@ -22,7 +22,7 @@ function get_link_items(){
     $linkcats = get_terms( 'link_category' );
     if ( !empty($linkcats) ) {
         foreach( $linkcats as $linkcat){
-            $result .=  '<h2 class="link-title">'.$linkcat->name.'</h2>';
+            $result .=  '<h2 class="link-title text-center">'.$linkcat->name.'</h2>';
             if( $linkcat->description ) $result .= '<div class="link-description">' . $linkcat->description . '</div>';
             $result .=  get_the_link_items($linkcat->term_id);
         }
