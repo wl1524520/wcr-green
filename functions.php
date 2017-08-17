@@ -155,13 +155,7 @@ function wcr_head_css() {
 endif;
 add_action('wp_head', 'wcr_head_css');
 
-/*
- * 修改摘要长度
- */
-function custom_excerpt_length( $length ) {
-        return 200;
-}
-add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
 
 // 侧边栏
 if ( ! function_exists( 'wcr_widgets_init' ) ) :
@@ -195,118 +189,26 @@ function wcr_paginate_page() {
 endif;
  */
 
-/*
- * 分页导航代码
- */
-function wcr_pagenavi($range = 9) {
-	global $paged, $wp_query;
-	if ( !isset($max_page) ) {
-        $max_page = $wp_query->max_num_pages;
-    }
-    if($max_page > 1) {
-        echo '<div id="pagenavi" class="text-center">';
-        echo '<nav aria-label="Page navigation"><ul class="pagination">';
-        if(!$paged) {
-            $paged = 1;
-        }
-        echo "<li><a href='" . get_pagenum_link(1) . "' aria-label='Previous'><span aria-hidden='true'>第一页</span></a></li>";
-        echo '<li>';
-        previous_posts_link(' 上一页 ');
-        echo '</li>';
+ /*
+  * 获取文章第一张图片
+  */
+ function wcr_catch_image($id) {
+     global $post, $posts;
+     $first_img = '';
+     // 如果设置了缩略图
+     $post_thumbnail_id = get_post_thumbnail_id($id);
+     if ($post_thumbnail_id) {
+         $output = wp_get_attachment_image_src($post_thumbnail_id, 'large');
+         $first_img = $output[0];
+     } else { // 没有缩略图，查找文章中的第一幅图片
+         ob_start();
+         ob_end_clean();
+         $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+         $first_img = $matches[1][0];
 
-        if($max_page > $range) {
-            if($paged < $range) {
-                for($i = 1; $i <= ($range + 1); $i++) {
-                    echo "<li";
-                    if($i==$paged)
-                        echo " class='active'";
-                    echo "><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
-                }
-            } elseif ($paged >= ($max_page - ceil(($range/2)))) {
-                for($i = $max_page - $range; $i <= $max_page; $i++) {
-                    echo "<li";
-                    if($i==$paged)
-                        echo " class='active'";
-                    echo "><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
-                }
-            } elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))) {
-                for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++) {
-                    echo "<li";
-                    if($i==$paged)
-                        echo " class='active'";
-                    echo "><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
-                }
-            }
-        } else {
-            for($i = 1; $i <= $max_page; $i++) {
-                echo "<li";
-                if($i==$paged)
-                    echo " class='active'";
-                echo "><a href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>";
-            }
-        }
-        echo '<li>';
-        next_posts_link(' 下一页 ');
-        echo '</li>';
-        echo "<li><a href='" . get_pagenum_link($max_page) . "' aria-label='Next'><span aria-hidden='true'>最末页</span></a></li>";
-        echo '</ul></nav>';
-        echo '</div>';
-    }
-}
-function wcr_pagenavi_m() {
-    echo '<div id="pagenavi-m" class="text-center">';
-    echo '<nav aria-label="..."><ul class="pager">';
-    echo '<li class="previous">';
-        previous_posts_link(' 前一页 ');
-    echo '</li>';
-    echo '<li class="next">';
-        next_posts_link(' 后一页 ');
-    echo '</li>';
-    echo '</ul></nav>';
-    echo '</div>';
-}
-
-/*
- * 获取文章第一张图片
- */
-function wcr_catch_image($id) {
-    global $post, $posts;
-    $first_img = '';
-    // 如果设置了缩略图
-    $post_thumbnail_id = get_post_thumbnail_id($id);
-    if ($post_thumbnail_id) {
-        $output = wp_get_attachment_image_src($post_thumbnail_id, 'large');
-        $first_img = $output[0];
-    } else { // 没有缩略图，查找文章中的第一幅图片
-        ob_start();
-        ob_end_clean();
-        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-        $first_img = $matches[1][0];
-
-        if(empty($first_img)){ // 既没有缩略图，文中也没有图，设置一幅默认的图片
-            $first_img = esc_url(get_template_directory_uri() . '/images/post_thumbnail.png');
-        }
-    }
-    return $first_img;
-}
-
-/*
- * 去除more的位置跳转
- */
-function remove_more_jump_link($link) {
-    $offset = strpos($link, '#more-');
-    if ($offset) {
-        $end = strpos($link, '"',$offset);
-    }
-    if ($end) {
-        $link = substr_replace($link, '', $offset, $end-$offset);
-    }
-    return $link;
-}
-add_filter('the_content_more_link', 'remove_more_jump_link');
-
-// 获取主题相对网站根目录的路径
-function wcr_template_path() {
-    $index = strpos(get_template_directory(), 'wp-content');
-    return substr(get_template_directory(), $index - 1);
-}
+         if(empty($first_img)){ // 既没有缩略图，文中也没有图，设置一幅默认的图片
+             $first_img = esc_url(get_template_directory_uri() . '/images/post_thumbnail.png');
+         }
+     }
+     return $first_img;
+ }

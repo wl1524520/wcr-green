@@ -15,8 +15,8 @@ get_header(); ?>
                     get_template_part( 'content', 'none' );
             endif;
 
-            wcr_pagenavi(9);
-            wcr_pagenavi_m();
+            if(function_exists('wcr_pagenavi')) wcr_pagenavi(9);
+            if(function_exists('wcr_pagenavi_m')) wcr_pagenavi_m();
             ?>
         </div>
     </div>
