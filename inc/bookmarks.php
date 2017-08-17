@@ -6,9 +6,12 @@ function get_the_link_items($id = null){
     if ( !empty($bookmarks) ) {
         $output .= '<div class="link-items">';
         foreach ($bookmarks as $bookmark) {
-            $output .=  '<p><a class="" href="'
-                        . $bookmark->link_url . '" title="' . $bookmark->link_description
-                        . '" target="_blank" >'. $bookmark->link_name .'</a> : '.$bookmark->link_description.'</p>';
+            $link_description = '';
+            if ($bookmark->link_description) {
+                $link_description = ' : ' . $bookmark->link_description;
+            }
+            $output .=  '<p class="text-center"><a href="' . $bookmark->link_url . '" target="_blank" >'
+                        . $bookmark->link_name .'</a>' . $link_description . '</p>';
         }
         $output .= '</div>';
     }
