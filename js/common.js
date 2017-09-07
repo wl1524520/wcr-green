@@ -1,19 +1,19 @@
-$(function(){
+jQuery(document).ready(function () {
 
     /* Back To Top */
     var offset = 220;
     var duration = 500;
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > offset) {
-            $('.crunchify-top').fadeIn(duration);
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.crunchify-top').fadeIn(duration);
         } else {
-            $('.crunchify-top').fadeOut(duration);
+            jQuery('.crunchify-top').fadeOut(duration);
         }
     });
      
-    $('.crunchify-top').click(function(event) {
+    jQuery('.crunchify-top').click(function(event) {
         event.preventDefault();
-        $('html, body').animate({scrollTop: 0}, duration);
+        jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
     })
 

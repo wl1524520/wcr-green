@@ -166,6 +166,7 @@ a:focus, input:focus, select:focus, textarea:focus {
 /*
  * 重写Bootstrap导航条样式
  */
+/*
 .navbar {
     border:0;
     border-radius: 0;
@@ -203,6 +204,27 @@ a:focus, input:focus, select:focus, textarea:focus {
     background-color: #5cb85c;
     color: #fff;
     border-radius: 5px;
+}
+*/
+.navbar {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    border-bottom: 1px solid #5cb85c;
+}
+.navbar .navbar-brand {
+    display: block;
+    padding:0 15px;
+    margin:0;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    background-color: #f5f5f5;
+}
+
+.navbar-default .navbar-nav>.current-menu-item>a,
+.navbar-default .navbar-nav>.current-menu-item>a:hover{
+    background-color: #5cb85c;
+    color: #fff;
 }
 
 /*
