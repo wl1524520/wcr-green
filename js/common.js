@@ -11,7 +11,7 @@ jQuery(document).ready(function () {
         }
     });
      
-    jQuery('.crunchify-top').click(function(event) {
+    jQuery('.crunchify-top').on('click', function(event) {
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
