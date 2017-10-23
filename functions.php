@@ -3,6 +3,8 @@
  * 功能函数文件
  */
 require get_template_directory() . '/inc/BootstrapWalker.class.php';
+require get_template_directory() . '/inc/wcr-archives.php';
+require get_template_directory() . '/inc/wcr-bookmarks.php';
 
 if (! function_exists('wcr_setup')) :
 function wcr_setup() {
