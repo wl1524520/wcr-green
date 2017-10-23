@@ -58,6 +58,7 @@ function wcr_pagenavi($range = 9) {
         echo '</div>';
     }
 }
+
 function wcr_pagenavi_m() {
     echo '<div id="pagenavi-m" class="text-center">';
     echo '<nav aria-label="..."><ul class="pager">';
