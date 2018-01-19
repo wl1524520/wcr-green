@@ -73,92 +73,83 @@ foreach ($res as $v) {
                     <h1 class="text-center"><?php the_title(); ?></h1>
                     <hr>
 
-                    <div class="row">
                     <h3>正在读的书</h3>
                     <?php foreach($readinglist as $v):?>
-                    <div class="col-xs-4">
-                        <div class="media">
-                          <div class="media-left">
-                            <a target="_blank" href="<?php echo $v['url'];?>">
-                              <img class="media-object" src="<?php echo $v['img'];?>" width="98" height="151" alt="...">
-                            </a>
-                          </div>
-                          <div class="media-body">
-                            <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
-                            <p><?php 
-                                echo '作者：'.$v['authors'].'</br>';
-                                if ($v['translator'] != '') {
-                                    echo '翻译：'.$v['translator'].'</br>';
-                                }
-                                echo '出版：'.$v['publisher'].'</br>';
-                                echo '时间：'.$v['pubdate'].'</br>';
+                    <div class="media">
+                      <div class="media-left">
+                        <a target="_blank" href="<?php echo $v['url'];?>">
+                          <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
+                        <p><?php 
+                            echo '作者：'.$v['authors'].'</br>';
+                            if ($v['translator'] != '') {
+                                echo '翻译：'.$v['translator'].'</br>';
+                            }
+                            echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
+                            if ($v['raters'] > 100) {
                                 echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
-                                echo '价格：'.$v['price'];
-                            ?>
-                            </p>
-                          </div>
-                        </div>
+                            }
+                            echo '价格：'.$v['price'];
+                        ?>
+                        </p>
+                      </div>
                     </div>
                     <?php endforeach; ?>
-                    </div>
 
-                    <div class="row">
-                    <h3>想读的书</h3>
+                    <h3>准备读的书</h3>
                     <?php foreach($wishlist as $v):?>
-                    <div class="col-xs-4">
-                        <div class="media">
-                          <div class="media-left">
-                            <a target="_blank" href="<?php echo $v['url'];?>">
-                              <img class="media-object" src="<?php echo $v['img'];?>" width="98" height="151" alt="...">
-                            </a>
-                          </div>
-                          <div class="media-body">
-                            <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
-                            <p><?php 
-                                echo '作者：'.$v['authors'].'</br>';
-                                if ($v['translator'] != '') {
-                                    echo '翻译：'.$v['translator'].'</br>';
-                                }
-                                echo '出版：'.$v['publisher'].'</br>';
-                                echo '时间：'.$v['pubdate'].'</br>';
+                    <div class="media">
+                      <div class="media-left">
+                        <a target="_blank" href="<?php echo $v['url'];?>">
+                          <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
+                        <p><?php 
+                            echo '作者：'.$v['authors'].'</br>';
+                            if ($v['translator'] != '') {
+                                echo '翻译：'.$v['translator'].'</br>';
+                            }
+                            echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
+                            if ($v['raters'] > 100) {
                                 echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
-                                echo '价格：'.$v['price'];
-                            ?>
-                            </p>
-                          </div>
-                        </div>
+                            }
+                            echo '价格：'.$v['price'];
+                        ?>
+                        </p>
+                      </div>
                     </div>
                     <?php endforeach; ?>
-                    </div>
 
-                    <div class="row">
                     <h3>已经读的书</h3>
                     <?php foreach($readlist as $v):?>
-                    <div class="col-xs-4">
-                        <div class="media">
-                          <div class="media-left">
-                            <a target="_blank" href="<?php echo $v['url'];?>">
-                              <img class="media-object" src="<?php echo $v['img'];?>" width="98" height="151" alt="...">
-                            </a>
-                          </div>
-                          <div class="media-body">
-                            <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
-                            <p><?php 
-                                echo '作者：'.$v['authors'].'</br>';
-                                if ($v['translator'] != '') {
-                                    echo '翻译：'.$v['translator'].'</br>';
-                                }
-                                echo '出版：'.$v['publisher'].'</br>';
-                                echo '时间：'.$v['pubdate'].'</br>';
+                    <div class="media">
+                      <div class="media-left">
+                        <a target="_blank" href="<?php echo $v['url'];?>">
+                          <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
+                        <p><?php 
+                            echo '作者：'.$v['authors'].'</br>';
+                            if ($v['translator'] != '') {
+                                echo '翻译：'.$v['translator'].'</br>';
+                            }
+                            echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
+                            if ($v['raters'] > 100) {
                                 echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
-                                echo '价格：'.$v['price'];
-                            ?>
-                            </p>
-                          </div>
-                        </div>
+                            }
+                            echo '价格：'.$v['price'];
+                        ?>
+                        </p>
+                      </div>
                     </div>
                     <?php endforeach; ?>
-                    </div>
 
                     <?php endwhile; ?>
                 </div>
