@@ -72,11 +72,6 @@ foreach ($res as $v) {
                     <?php while ( have_posts() ) : the_post(); ?>
                     <h1 class="text-center"><?php the_title(); ?></h1>
                     <hr>
-                    <?php
-echo '<pre>';
-var_dump($res);
-echo '</pre>';
-?>
 
                     <div class="row">
                     <h3>正在读的书</h3>
