@@ -50,20 +50,9 @@
     </header>
 
     <?php //if ( is_home() || is_front_page() ) : ?>
-    <?php
-        if(function_exists('hello_wanglu')) {
-            // hello-wanglu 插件
-            // 插件地址：https://github.com/wl1524520/hello-wanglu.git
-            $hello = hello_wanglu();
-        } else {
-            $hello = '不记初心，方得始终。';
-        }
-        $hello = '青，取之于蓝而青于蓝；冰，水为之而寒于水。';
-    ?>
     <div class="home-title">
         <div class="container">
-            <h1 class="wp-caption"><?php bloginfo('name'); ?></h1>
-            <p class="wp-slogan"><?php echo $hello; ?></p>
+            <p class="wp-slogan">青，取之于蓝而青于蓝；冰，水为之而寒于水。</p>
         </div>
     </div>
     <?php //endif; ?>

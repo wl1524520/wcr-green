@@ -11,7 +11,7 @@
         <span>&copy; 2014-2017 <a title="<?php echo bloginfo('name'); ?>" href="<?php echo esc_url(home_url('/')); ?>"><?php echo bloginfo('name'); ?></a><span>
     </p>
 </footer>
-<a href="#" class="crunchify-top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+<!-- <a href="#" class="crunchify-top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a> -->
 </div> <!-- end #wrapper -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
@@ -20,8 +20,6 @@
 
 <!-- 极简社会化分享插件 https://www.qinco.net/basicshare -->
 <script src="<?php echo esc_url(get_template_directory_uri() . '/statics/basic-share/0.3.min.js'); ?>"></script> 
-
-<script src="<?php echo esc_url(get_template_directory_uri() . '/js/common.js'); ?>"></script>
 
 <?php wp_footer(); ?>
 </body>
