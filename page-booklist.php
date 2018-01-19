@@ -84,7 +84,7 @@ foreach ($res as $v) {
                             </a>
                           </div>
                           <div class="media-body">
-                            <h4 class="media-heading"><?php echo $v['name'].'：'.$v['subtitle'];?></h4>
+                            <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
                             <p><?php 
                                 echo '作者：'.$v['authors'].'</br>';
                                 if ($v['translator'] != '') {
@@ -113,7 +113,7 @@ foreach ($res as $v) {
                             </a>
                           </div>
                           <div class="media-body">
-                            <h4 class="media-heading"><?php echo $v['name'].'：'.$v['subtitle'];?></h4>
+                            <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
                             <p><?php 
                                 echo '作者：'.$v['authors'].'</br>';
                                 if ($v['translator'] != '') {
@@ -142,7 +142,7 @@ foreach ($res as $v) {
                             </a>
                           </div>
                           <div class="media-body">
-                            <h4 class="media-heading"><?php echo $v['name'].'：'.$v['subtitle'];?></h4>
+                            <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
                             <p><?php 
                                 echo '作者：'.$v['authors'].'</br>';
                                 if ($v['translator'] != '') {
