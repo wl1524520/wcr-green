@@ -14,10 +14,10 @@ function get_the_link_items($id = null){
         foreach ($bookmarks as $bookmark) {
             $link_description = '';
             if ($bookmark->link_description) {
-                $link_description = ' : ' . $bookmark->link_description;
+                $link_description = '<span class="bm-dem">：</span>' . $bookmark->link_description;
             }
-            $output .=  '<p><a href="' . $bookmark->link_url . '" target="_blank" >'
-                        . $bookmark->link_name .'</a>' . $link_description . '</p>';
+            $output .=  '<p><a class="bm-link" href="' . $bookmark->link_url . '" target="_blank" >'
+                        . $bookmark->link_name .'</a><span class="bm-desc">' . $link_description . '</span></p>';
         }
         $output .= '</div>';
     }
