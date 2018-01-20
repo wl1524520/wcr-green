@@ -26,24 +26,8 @@
                         echo '<p>本文地址：<a href="' . $current_url . '" title="' . get_the_title($post->ID) . '">'  . $current_url . '</a></p>';
                     ?>
                 </div>
-                <div class="wcr_share">
-                    <button class='basicShareBtn' data-sharePic='<?php echo wcr_catch_image($post->ID); ?>'>分享</button>
-                </div>
-
                 <div class="wp-related-content">
-                    <?php
-                        if ( function_exists('wpjam_related_posts') ) {
-                            $args = array(
-                                'class'=>'',                    //外层ul的class。
-                                'thumb' => true,                //是否带缩略图，默认带
-                                'size' => 'medium',             //缩略图大小
-                                'crop'=> true,                  //缩略图是否裁剪
-                                'thumb_class'=>'img-responsive center-block', //缩略图的class
-                                'number_per_row'=>4             //如果设置为缩略图为横排，每行个数
-                            );
-                            wpjam_related_posts(4, $args);
-                        }
-                    ?>
+                    <?php wp_related_posts()?>
                 </div>
             </article>
             <?php comments_template(); ?>

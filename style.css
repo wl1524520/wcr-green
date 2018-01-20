@@ -300,16 +300,17 @@ blockquote {
 /*
  * 文章列表
  */
-.article-list article{
+.article-list {
     padding: 15px 15px;
     background: #fff;
     //border: solid 1px #ccc;
     -webkit-box-shadow: 0 4px 12px #ccc;
     -moz-box-shadow: 0 4px 12px #ccc;
     box-shadow: 0 4px 12px #ccc;
-}
-article {
     margin-bottom:25px;
+}
+.article-list p {
+    font-size: 18px;
 }
 article .meta {
     display: block;
@@ -613,6 +614,9 @@ article ol li{
 #archives .al_day {
     padding-left: 5px;
 }
+#archives p {
+    font-size: 18px;
+}
 
 /*
  * 分享按钮
@@ -635,41 +639,12 @@ article ol li{
 /*
  * 关联文章
  */
-.wp-related-content{
-    margin: 10px;
-}
-.wp-related-content h4{
-    font-size: 14px;
-}
-.wp-related-content ul {
-    display: block;
-    padding-left: 0;
-}
-.wp-related-content ul:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
 .wp-related-content li {
-    display: block;
-    float: none;
-    list-style: none;
-    width: 100%;
-    padding: 5px;
-    background: #fff;
+    margin-bottom: 8px;
 }
-.wp-related-content li:hover {
-    background: #ddd;
+.wp-related-content li a {
+    font-size: 17px;
 }
-.wp-related-content li span {
-    display: block;
-    font-size: 14px;
-    text-align: center;
-    overflow: hidden;
-}
-
 
 /**  comments  **/
 .comments{
@@ -932,17 +907,6 @@ textarea#comment{
     .sidebar-page{
         display: block;
     }
-    .wp-related-content ul li {
-        display: block;
-        float: left;
-        list-style: none;
-        width: 25%;
-        padding: 5px;
-        background: #fff;
-    }
-    .wp-related-content ul li span {
-        height: 40px;
-    }
     .comments article .comment-metadata {
         position: absolute;
         top: 4px;
@@ -970,7 +934,7 @@ textarea#comment{
     .wp-slogan {
         font-size: 18px;
     }
-    .article-list article,
+    .article-list,
     .singlepost {
         padding: 15px 25px;
     }

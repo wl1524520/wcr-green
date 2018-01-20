@@ -44,7 +44,15 @@
                         <img width="120" height="50" alt="<?php bloginfo('name'); ?>" src="<?php echo esc_url(get_template_directory_uri() . '/images/logo.png'); ?>" />
                     </a>
                 </div>
-                <?php wcr_nav_menu(); ?>
+                <div class="collapse navbar-collapse" id="wcr-nav-menu">
+                    <?php wcr_nav_menu(); ?>
+                    <form class="navbar-form navbar-right" action="<?php echo home_url( "/" ); ?>" method="GET">
+                        <div class="form-group">
+                            <input name="s" type="text" class="form-control" placeholder="关键字">
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
+                </div>
             </div><!-- /.container-fluid -->
         </nav>
     </header>

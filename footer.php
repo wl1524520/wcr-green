@@ -19,7 +19,6 @@
 <script src="https:////cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- 极简社会化分享插件 https://www.qinco.net/basicshare -->
-<script src="<?php echo esc_url(get_template_directory_uri() . '/statics/basic-share/0.3.min.js'); ?>"></script> 
 
 <?php wp_footer(); ?>
 </body>

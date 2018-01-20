@@ -63,101 +63,97 @@ foreach ($res as $v) {
 ?>
 
 <div class="container">
-    <div class="row">
-        <div id="primary" class="col-xs-12 col-md-12">
 
-            <article class="singlepost">
-                <div class="single-content">
+    <article class="singlepost">
+        <div class="single-content">
 
-                    <?php while ( have_posts() ) : the_post(); ?>
-                    <h1 class="text-center"><?php the_title(); ?></h1>
-                    <hr>
+            <?php while ( have_posts() ) : the_post(); ?>
+            <h1 class="text-center"><?php the_title(); ?></h1>
+            <hr>
 
-                    <h3>正在读的书</h3>
-                    <?php foreach($readinglist as $v):?>
-                    <div class="media">
-                      <div class="media-left">
-                        <a target="_blank" href="<?php echo $v['url'];?>">
-                          <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
-                        <p><?php 
-                            echo '作者：'.$v['authors'].'</br>';
-                            if ($v['translator'] != '') {
-                                echo '翻译：'.$v['translator'].'</br>';
-                            }
-                            echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
-                            if ($v['raters'] > 100) {
-                                echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
-                            }
-                            echo '价格：'.$v['price'];
-                        ?>
-                        </p>
-                      </div>
-                    </div>
-                    <?php endforeach; ?>
+            <h3>正在读的书</h3>
+            <?php foreach($readinglist as $v):?>
+            <div class="media">
+              <div class="media-left">
+                <a target="_blank" href="<?php echo $v['url'];?>">
+                  <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
+                <p><?php 
+                    echo '作者：'.$v['authors'].'</br>';
+                    if ($v['translator'] != '') {
+                        echo '翻译：'.$v['translator'].'</br>';
+                    }
+                    echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
+                    if ($v['raters'] > 100) {
+                        echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
+                    }
+                    echo '价格：'.$v['price'];
+                ?>
+                </p>
+              </div>
+            </div>
+            <?php endforeach; ?>
 
-                    <h3>准备读的书</h3>
-                    <?php foreach($wishlist as $v):?>
-                    <div class="media">
-                      <div class="media-left">
-                        <a target="_blank" href="<?php echo $v['url'];?>">
-                          <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
-                        <p><?php 
-                            echo '作者：'.$v['authors'].'</br>';
-                            if ($v['translator'] != '') {
-                                echo '翻译：'.$v['translator'].'</br>';
-                            }
-                            echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
-                            if ($v['raters'] > 100) {
-                                echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
-                            }
-                            echo '价格：'.$v['price'];
-                        ?>
-                        </p>
-                      </div>
-                    </div>
-                    <?php endforeach; ?>
+            <h3>准备读的书</h3>
+            <?php foreach($wishlist as $v):?>
+            <div class="media">
+              <div class="media-left">
+                <a target="_blank" href="<?php echo $v['url'];?>">
+                  <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
+                <p><?php 
+                    echo '作者：'.$v['authors'].'</br>';
+                    if ($v['translator'] != '') {
+                        echo '翻译：'.$v['translator'].'</br>';
+                    }
+                    echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
+                    if ($v['raters'] > 100) {
+                        echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
+                    }
+                    echo '价格：'.$v['price'];
+                ?>
+                </p>
+              </div>
+            </div>
+            <?php endforeach; ?>
 
-                    <h3>已经读的书</h3>
-                    <?php foreach($readlist as $v):?>
-                    <div class="media">
-                      <div class="media-left">
-                        <a target="_blank" href="<?php echo $v['url'];?>">
-                          <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
-                        <p><?php 
-                            echo '作者：'.$v['authors'].'</br>';
-                            if ($v['translator'] != '') {
-                                echo '翻译：'.$v['translator'].'</br>';
-                            }
-                            echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
-                            if ($v['raters'] > 100) {
-                                echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
-                            }
-                            echo '价格：'.$v['price'];
-                        ?>
-                        </p>
-                      </div>
-                    </div>
-                    <?php endforeach; ?>
+            <h3>已经读的书</h3>
+            <?php foreach($readlist as $v):?>
+            <div class="media">
+              <div class="media-left">
+                <a target="_blank" href="<?php echo $v['url'];?>">
+                  <img id="book-img" class="media-object" src="<?php echo $v['img'];?>">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><?php echo $v['name']; echo $v['subtitle'] != '' ? '：'.$v['subtitle'] : '';?></h4>
+                <p><?php 
+                    echo '作者：'.$v['authors'].'</br>';
+                    if ($v['translator'] != '') {
+                        echo '翻译：'.$v['translator'].'</br>';
+                    }
+                    echo '出版：'.$v['publisher'].' / '.$v['pubdate'].'</br>';
+                    if ($v['raters'] > 100) {
+                        echo '评分：'.$v['rating'].'分 / '.$v['raters'].'人</br>';
+                    }
+                    echo '价格：'.$v['price'];
+                ?>
+                </p>
+              </div>
+            </div>
+            <?php endforeach; ?>
 
-                    <?php endwhile; ?>
-                </div>
-            </article>
-            <?php comments_template(); ?>
-
+            <?php endwhile; ?>
         </div>
-    </div>
+    </article>
+    <?php comments_template(); ?>
+
 </div>
 
 <?php get_footer(); ?>

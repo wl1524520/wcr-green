@@ -23,7 +23,7 @@ function dimox_breadcrumbs() {
 	$sep_before     = '<span class="sep">'; // tag before separator
 	$sep_after      = '</span>'; // tag after separator
 	$show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
-	$show_on_home   = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
+	$show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
 	$show_current   = 1; // 1 - show current page title, 0 - don't show
 	$before         = '<span class="current">'; // tag before the current crumb
 	$after          = '</span>'; // tag after the current crumb
