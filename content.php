@@ -7,12 +7,9 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <p>
-        <span><?php the_time( get_option( 'date_format' ) ); ?><span>
-        <?php if ( post_password_required() ) : ?>
-        <?php echo 'lock '; ?>
-        <?php endif; ?>
-        <a href="<?php the_permalink() ?>"><?php if(get_the_title($post->ID)) { the_title(); } else { the_time( get_option( 'date_format' ) ); } ?></a>
-        <?php if (function_exists('the_views')) { echo '<span>(';  the_views() ; echo ' views)</span>'; } ?>
-        <?php echo '&nbsp;&nbsp;-- ';the_author(); ?>
+        <span class="list-date"><?php the_time( get_option( 'date_format' ) ); ?><span>
+        <a class="list-title" href="<?php the_permalink() ?>"><?php if(get_the_title($post->ID)) { the_title(); } else { the_time( get_option( 'date_format' ) ); } ?></a>
+        <span class="list-views"><?php if (function_exists('the_views')) { echo '(';  the_views() ; echo ' views)'; } ?></span>
+        <span class="list-author"><?php echo '&nbsp;&nbsp;-- ';the_author(); ?></span>
     </p>
 </article>
