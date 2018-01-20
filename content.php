@@ -13,5 +13,6 @@
         <?php endif; ?>
         <a href="<?php the_permalink() ?>"><?php if(get_the_title($post->ID)) { the_title(); } else { the_time( get_option( 'date_format' ) ); } ?></a>
         <?php if (function_exists('the_views')) { echo '<span>(';  the_views() ; echo ' views)</span>'; } ?>
+        <?php echo '&nbsp;&nbsp;-- ';the_author(); ?>
     </p>
 </article>
