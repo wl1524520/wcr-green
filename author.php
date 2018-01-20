@@ -4,7 +4,7 @@
  */
 get_header(); ?>
 <div class="container">
-    <div id="primary" class="article-list">
+    <div class="article-list">
         <?php
         if(have_posts()) :
             while (have_posts()) :
