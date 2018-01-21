@@ -666,6 +666,10 @@ article ol li{
     background-color: #f5f5f5;
     border-left: 6px solid #5cb85c;
 }
+.comments ul,
+.comments li {
+    list-style: none;
+}
 .comments ul {
     padding-left: 0;
 }
@@ -872,10 +876,6 @@ textarea#comment{
 /*
  * 友情链接
  */
-.link-items p {
-    font-size: 16px;
-    padding: 0.3em;
-}
 .link-items .bm-link,
 .link-items .bm-desc {
     display: block;

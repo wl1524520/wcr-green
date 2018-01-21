@@ -10,16 +10,16 @@ function get_the_link_items($id = null){
     //$bookmarks = get_bookmarks('orderby=rand&category=' .$id );
     $output = '';
     if ( !empty($bookmarks) ) {
-        $output .= '<div class="link-items">';
+        $output .= '<div class="link-items"><ul>';
         foreach ($bookmarks as $bookmark) {
             $link_description = '';
             if ($bookmark->link_description) {
                 $link_description = '<span class="bm-dem">：</span>' . $bookmark->link_description;
             }
-            $output .=  '<p><a class="bm-link" href="' . $bookmark->link_url . '" target="_blank" >'
+            $output .=  '<li><p><a class="bm-link" href="' . $bookmark->link_url . '" target="_blank" >'
                         . $bookmark->link_name .'</a><span class="bm-desc">' . $link_description . '</span></p>';
         }
-        $output .= '</div>';
+        $output .= '</ul></div>';
     }
     return $output;
 }
