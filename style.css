@@ -104,6 +104,7 @@ Text Domain: wcr-green
 /*
  * chrome scrollbar
  */
+/*
 ::-webkit-scrollbar{
     width:12px;
     height:8px;
@@ -118,7 +119,6 @@ Text Domain: wcr-green
 ::-webkit-scrollbar-corner {
     background: transparent;
 }
-/*
 ::-webkit-scrollbar-thumb:hover {background-color:#5cb85c;}
 ::-webkit-scrollbar-thumb:active {background-color:#5cb85c;}
 */
