@@ -133,9 +133,6 @@ body {
 article,aside,details,figcaption,figure,footer,header,main,nav,section {
     display: block;
 }
-ol,ul,li {
-    list-style: none;
-}
 a {
     color: #5cb85c;
 }
