@@ -14,7 +14,8 @@ foreach ($res as $v) {
 
     $book_name  = $v['book']['title'];
     $book_sub   = $v['book']['subtitle'];
-    $book_img   = $v['book']['images']['medium'];
+    //$book_img   = $v['book']['images']['medium'];
+    $book_img   = $v['book']['image'];
     $book_url   = $v['book']['alt'];
     $publisher  = $v['book']['publisher'];
     $pubdate    = $v['book']['pubdate'];
