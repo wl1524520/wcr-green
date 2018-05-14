@@ -16,6 +16,11 @@ foreach ($res as $v) {
     $book_sub   = $v['book']['subtitle'];
     //$book_img   = $v['book']['images']['medium'];
     $book_img   = $v['book']['image'];
+    $index = strpos($book_img, 'com/');
+    $index = $index + strlen('com/');
+    $book_img = substr($book_img, $index);
+    $book_img = 'https://img.uniteyun.com/douban/'.$book_img;
+
     $book_url   = $v['book']['alt'];
     $publisher  = $v['book']['publisher'];
     $pubdate    = $v['book']['pubdate'];
