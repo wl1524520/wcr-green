@@ -15,6 +15,7 @@ if(function_exists('get_link_items')) echo get_link_items();
                 <li><p><a class="bm-link" href="https://www.hm-chn.com/" target="_blank">云南翰墨装饰</a><span class="bm-desc"><span class="bm-dem">：</span>优秀品质 源于专业 承接装修设计与房屋维修</span></p></li>
                 <li><p><a class="bm-link" href="https://webshao.com/" target="_blank">邵维恒博客</a><span class="bm-desc"><span class="bm-dem">：</span>邵维恒博客</span></p></li>
                 <li><p><a class="bm-link" href="https://lianjie.fun/" target="_blank">Lianjie's Blog</a><span class="bm-desc"><span class="bm-dem">：</span>范廉洁的个人博客</span></p></li>
+                <li><p><a class="bm-link" href="https://ikkesant.men/" target="_blank">IKKE SANT 艺可尚特</a><span class="bm-desc"><span class="bm-dem">：</span>一个有点意思的网站</span></p></li>
                 <li><p><a class="bm-link" href="http://www.hy-chn.cn/" target="_blank">合一体育</a><span class="bm-desc"><span class="bm-dem">：</span>云南合一体育</span></p></li>
                 <li><p><a class="bm-link" href="http://www.izhuyue.com" target="_blank">FROYO's Blog</a><span class="bm-desc"><span class="bm-dem">：</span>将来的你，一定会感谢现在努力的自己。</span></p></li>
                 <li><p><a class="bm-link" href="https://www.qxfell.com/" target="_blank">小飞熊's blog</a><span class="bm-desc"><span class="bm-dem">：</span>一个爱玩爱折腾从业于IT的小伙子的博客 喜欢Linux 崇尚开源精神</span></p></li>
