@@ -30,6 +30,8 @@ if(function_exists('get_link_items')) echo get_link_items();
                 <li><p><a class="bm-link" href="https://laod.cn" target="_blank">老D博客</a><span class="bm-desc"><span class="bm-dem">：</span>关注谷歌服务，分享互联网精神！</span></p></li>
                 <li><p><a class="bm-link" href="http://www.mintos.org/" target="_blank">薄荷开源网</a><span class="bm-desc"><span class="bm-dem">：</span>致力于Linux推广应用</span></p></li>
                 <li><p><a class="bm-link" href="https://coolshell.cn/" target="_blank">酷壳COOLSHELL</a><span class="bm-desc"><span class="bm-dem">：</span>左耳朵耗子陈皓</span></p></li>
+                <li><p><a class="bm-link" href="https://www.manjaro.cn/" target="_blank">Manjaro Linux 乐于简单</a><span class="bm-desc"><span class="bm-dem">：</span>Arch优秀衍生版、世界排名前1</span></p></li>
+                <li><p><a class="bm-link" href="https://www.lulinux.com/" target="_blank">撸Linux</a><span class="bm-desc"><span class="bm-dem">：</span>Linux桌面_Linux系统_Linux美化_Linux软件_Linux入门-撸Linux</span></p></li>
                 <li><p><a class="bm-link" href="https://www.qinco.net/" target="_blank">青谷</a><span class="bm-desc"><span class="bm-dem">：</span>HTML5建站服务</span></p></li>
                 <li><p><a class="bm-link" href="https://softwaredownload.gitbooks.io/openwrt-fanqiang/content/ebook/03.5.html" target="_blank">OpenWRT ss</a><span class="bm-desc"><span class="bm-dem">：</span>众所周知的原因</span></p></li>
                 <li><p><a class="bm-link" href="http://dimox.net/wordpress-breadcrumbs-without-a-plugin/" target="_blank">WordPress面包屑导航</a><span class="bm-desc"><span class="bm-dem">：</span>不使用插件主题集成</span></p></li>
