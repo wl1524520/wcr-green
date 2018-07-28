@@ -29,41 +29,37 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="wrapper">
-    <header id="header">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wcr-nav-menu">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                        <img width="120" height="50" alt="<?php bloginfo('name'); ?>" src="<?php echo esc_url(get_template_directory_uri() . '/images/logo.png'); ?>" />
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="wcr-nav-menu">
-                    <?php wcr_nav_menu(); ?>
-                    <form class="navbar-form navbar-right" action="<?php echo home_url( "/" ); ?>" method="GET">
-                        <div class="form-group">
-                            <input name="s" type="text" class="form-control" placeholder="关键字">
-                        </div>
-                        <button type="submit" class="btn btn-default">Search</button>
-                    </form>
-                </div>
-            </div><!-- /.container-fluid -->
-        </nav>
-    </header>
+    <nav id="header" class="navbar navbar-default navbar-fixed-top navbar-static-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wcr-nav-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
+                    <img width="120" height="50" alt="<?php bloginfo('name'); ?>" src="<?php echo esc_url(get_template_directory_uri() . '/images/logo.png'); ?>" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="wcr-nav-menu">
+                <?php wcr_nav_menu(); ?>
+                <form class="navbar-form navbar-right" action="<?php echo home_url( "/" ); ?>" method="GET">
+                    <div class="form-group">
+                        <input name="s" type="text" class="form-control" placeholder="关键字">
+                    </div>
+                    <button type="submit" class="btn btn-default">Search</button>
+                </form>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
 
-    <?php //if ( is_home() || is_front_page() ) : ?>
     <div class="home-title">
         <div class="container">
             <p class="wp-slogan">青，取之于蓝而青于蓝；冰，水为之而寒于水。</p>
         </div>
     </div>
-    <?php //endif; ?>
 
     <div class="container">
         <div class="nav-bread">

@@ -825,26 +825,33 @@ textarea#comment{
 }
 */
 
-/*
- * #footer样式
- */
-#footer {
-    background: #404040;
-    padding: 10px 0;
+/* 底部样式 */
+html {
+    position: relative;
+    min-height: 100% ;
 }
-#footer p {
-    margin-top: 0;
-    margin-bottom: 0;
+body {
+    margin-bottom: 60px;
 }
-#footer p, #footer a {
-    font-size: 16px;
-    color: #eee;
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100% ;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #000;
 }
-#footer a:hover {
-    color: #5cb85c;
+.footer .container {
+    padding-right: 15px;
+    padding-left: 15px;
 }
-#footer span {
-    display: block;
+.footer .container p {
+    margin: 19px 0;
+    color: #c1c1c1;
+}
+.footer .container p a {
+    color: inherit;
 }
 
 /*
@@ -937,9 +944,6 @@ textarea#comment{
     }
     #pagenavi-m {
         display:none;
-    }
-    #footer span {
-        display: inline;
     }
 }
 
