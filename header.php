@@ -44,7 +44,7 @@
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="wcr-nav-menu">
-                <?php wcr_nav_menu(); ?>
+                <?php wpjam_nav_menu(); ?>
                 <form class="navbar-form navbar-right" action="<?php echo home_url( "/" ); ?>" method="GET">
                     <div class="form-group">
                         <input name="s" type="text" class="form-control" placeholder="关键字">

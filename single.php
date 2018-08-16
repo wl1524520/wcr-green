@@ -26,9 +26,6 @@
                         echo '<p>本文地址：<a href="' . $current_url . '" title="' . get_the_title($post->ID) . '">'  . $current_url . '</a></p>';
                     ?>
                 </div>
-                <div class="wp-related-content">
-                    <?php wp_related_posts()?>
-                </div>
             </article>
             <?php comments_template(); ?>
             <?php endwhile; ?>
