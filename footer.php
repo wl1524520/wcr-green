@@ -10,7 +10,7 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <p class="text-center">&copy; 2014-2018 <span style="color: #e27575;font-size: 14px;">❤</span> <?php echo bloginfo('name'); ?></p>
+            <p class="text-center">&copy; 2014-<?php echo date('Y'); ?> <span style="color: #e27575;font-size: 14px;">❤</span> <?php echo bloginfo('name'); ?></p>
         </div>
     </footer>
     <!-- <a href="#" class="crunchify-top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a> -->
