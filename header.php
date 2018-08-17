@@ -47,9 +47,9 @@
                 <?php wpjam_nav_menu(); ?>
                 <form class="navbar-form navbar-right" action="<?php echo home_url( "/" ); ?>" method="GET">
                     <div class="form-group">
-                        <input name="s" type="text" class="form-control" placeholder="关键字">
+                        <input name="s" type="text" class="form-control" placeholder="机智的人善用搜索">
                     </div>
-                    <button type="submit" class="btn btn-default">Search</button>
+                    <button type="submit" class="btn btn-default">搜索</button>
                 </form>
             </div>
         </div><!-- /.container-fluid -->

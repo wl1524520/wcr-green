@@ -22,8 +22,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https:////cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!-- 极简社会化分享插件 https://www.qinco.net/basicshare -->
-
 <?php wp_footer(); ?>
 </body>
 <?php if(function_exists('wcr_performance')) wcr_performance(false); ?>
