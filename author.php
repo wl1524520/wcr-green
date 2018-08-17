@@ -3,7 +3,6 @@
  * 主页模板
  */
 get_header(); ?>
-<div class="container">
     <div class="article-list">
         <?php
         if(have_posts()) :
@@ -20,5 +19,4 @@ get_header(); ?>
     if(function_exists('wcr_pagenavi')) wcr_pagenavi(9);
     if(function_exists('wcr_pagenavi_m')) wcr_pagenavi_m();
     ?>
-</div>
 <?php get_footer(); ?>

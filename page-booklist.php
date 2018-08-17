@@ -68,8 +68,6 @@ foreach ($res as $v) {
 
 ?>
 
-<div class="container">
-
     <article class="singlepost">
         <div class="single-content">
 
@@ -159,7 +157,5 @@ foreach ($res as $v) {
         </div>
     </article>
     <?php comments_template(); ?>
-
-</div>
 
 <?php get_footer(); ?>

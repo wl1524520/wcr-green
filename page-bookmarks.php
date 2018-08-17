@@ -6,7 +6,6 @@ if(function_exists('get_link_items')) echo get_link_items();
 */
  get_header(); ?>
 
-<div class="container">
     <div id="archives">
         <h2 class="link-title text-center">友情链接</h2>
         <hr>
@@ -38,6 +37,5 @@ if(function_exists('get_link_items')) echo get_link_items();
             </ul>
         </div>
     </div>
-</div>
 
 <?php get_footer(); ?>

@@ -4,7 +4,6 @@
  */
  get_header(); ?>
 
-<div class="container">
     <article class="singlepost">
         <div class="single-content">
 
@@ -17,6 +16,5 @@
         </div>
     </article>
     <?php comments_template(); ?>
-</div>
 
 <?php get_footer(); ?>

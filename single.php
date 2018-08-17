@@ -4,9 +4,7 @@
  */
  get_header(); ?>
 
-<div class="container">
-    <div class="row">
-        <div id="primary" class="col-xs-12 col-md-12">
+        <div id="primary">
 
             <?php while (have_posts()) : the_post(); ?>
             <article class="singlepost">
@@ -31,7 +29,5 @@
             <?php endwhile; ?>
 
         </div>
-    </div>
-</div>
 
 <?php get_footer(); ?>

@@ -180,8 +180,6 @@ a:focus, input:focus, select:focus, textarea:focus {
 
 .navbar-default .navbar-nav>.current-menu-item>a,
 .navbar-default .navbar-nav>.current-menu-item>a:hover{
-    padding-top: 10px;
-    border-top: 5px solid #5cb85c;
     color: #5cb85c;
 }
 

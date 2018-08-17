@@ -4,8 +4,6 @@ Template Name: 留言
 */
  get_header(); ?>
 
-<div class="container">
-
     <article class="singlepost">
         <div class="single-content">
             <?php while ( have_posts() ) : the_post(); ?>
@@ -24,7 +22,5 @@ Template Name: 留言
         </div>
     </article>
     <?php comments_template(); ?>
-
-</div>
 
 <?php get_footer(); ?>

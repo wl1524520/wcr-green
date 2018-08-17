@@ -62,7 +62,8 @@
     </div>
 
     <div class="container">
-        <div class="nav-bread">
-            <?php if (function_exists('dimox_breadcrumbs')) {dimox_breadcrumbs();} ?>
-        </div>
-    </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="nav-bread">
+                    <?php if (function_exists('dimox_breadcrumbs')) {dimox_breadcrumbs();} ?>
+                </div>
