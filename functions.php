@@ -8,6 +8,9 @@ require get_template_directory() . '/inc/wcr-nav.php';
 require get_template_directory() . '/inc/wcr-pagenav.php';
 require get_template_directory() . '/inc/wcr-breadcrumbs.php';
 
+// 并没有什么卵用
+if (! isset($content_width)) $content_width = 900;
+
 if (! function_exists('wcr_setup')) :
 function wcr_setup() {
 	/*
@@ -80,9 +83,6 @@ function wcr_setup() {
 endif; // wcr_setup
 add_action( 'after_setup_theme', 'wcr_setup' );
 
-// 并没有什么卵用
-if (! isset($content_width)) $content_width = 900;
-
 function wcr_scripts() {
 	// Theme stylesheet.
 	wp_enqueue_style('wcr-style', get_stylesheet_uri());
@@ -141,27 +141,3 @@ function wcr_widgets_init() {
 endif;
 add_action('widgets_init', 'wcr_widgets_init');
  */
-
-/*
- * 获取文章第一张图片
- */
-function wcr_catch_image($id) {
-    global $post, $posts;
-    $first_img = '';
-    // 如果设置了缩略图
-    $post_thumbnail_id = get_post_thumbnail_id($id);
-    if ($post_thumbnail_id) {
-        $output = wp_get_attachment_image_src($post_thumbnail_id, 'large');
-        $first_img = $output[0];
-    } else { // 没有缩略图，查找文章中的第一幅图片
-        ob_start();
-        ob_end_clean();
-        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-        $first_img = $matches[1][0];
-
-        if(empty($first_img)){ // 既没有缩略图，文中也没有图，设置一幅默认的图片
-            $first_img = esc_url(get_template_directory_uri() . '/images/post_thumbnail.png');
-        }
-    }
-    return $first_img;
-}
