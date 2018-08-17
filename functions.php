@@ -2,7 +2,6 @@
 /*
  * 功能函数文件
  */
-require get_template_directory() . '/inc/BootstrapWalker.class.php';
 require get_template_directory() . '/inc/wcr-archives.php';
 require get_template_directory() . '/inc/wcr-bookmarks.php';
 require get_template_directory() . '/inc/wcr-nav.php';
@@ -33,7 +32,6 @@ function wcr_setup() {
 	/*
 	 * Enable support for custom logo.
 	 *
-	 *  @since Twenty Sixteen 1.2
 	 */
 	/*
 	add_theme_support( 'custom-logo', array(
@@ -85,11 +83,6 @@ add_action( 'after_setup_theme', 'wcr_setup' );
 // 并没有什么卵用
 if (! isset($content_width)) $content_width = 900;
 
-/**
- * Enqueues scripts and styles.
- *
- * @since Twenty Sixteen 1.0
- */
 function wcr_scripts() {
 	// Theme stylesheet.
 	wp_enqueue_style('wcr-style', get_stylesheet_uri());
@@ -112,36 +105,6 @@ function wcr_scripts() {
 add_action('wp_enqueue_scripts', 'wcr_scripts');
 
 /*
- * 生成Bootstrap导航菜单
- */
-function wcr_nav_menu() {
-    $defaults = array(
-        //'container'         => 'div',
-        //'container_class'   => 'collapse navbar-collapse',
-        //'container_id'      => 'wcr-nav-menu',
-        'container'         => '',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'wcr-nav-menu',
-        'menu'              => 'mainav',
-        'menu_class'        => 'nav navbar-nav',
-        'menu_id'           => 'top-nav',
-        'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-        'fallback_cb'       => '',
-        'walker'            => new Bootstrap_Walker(),
-        'depth'             => 2
-    );
-    if(has_nav_menu('primary')) {
-        wp_nav_menu($defaults);
-    }
-
-    /*
-    if (function_exists('wp_nav_menu') && has_nav_menu('primary')) {
-        wp_nav_menu($defaults);
-    }
-     */
-}
-
-/*
  * 增加wp_head内容
  */
 if ( ! function_exists( 'wcr_head_css' ) ) :
@@ -162,6 +125,7 @@ add_action('wp_head', 'wcr_head_css');
 
 
 // 侧边栏
+/*
 if ( ! function_exists( 'wcr_widgets_init' ) ) :
 function wcr_widgets_init() {
 	register_sidebar(array(
@@ -176,6 +140,7 @@ function wcr_widgets_init() {
 }
 endif;
 add_action('widgets_init', 'wcr_widgets_init');
+ */
 
 /*
  * 获取文章第一张图片

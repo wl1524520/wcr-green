@@ -19,7 +19,8 @@ function wpjam_nav_menu( $args = array() ) {
         'link_after' => '', 
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
         'depth' => 0, 
-        'walker' => new Bootstrap_Walker(),
+        //'walker' => new Bootstrap_Walker(),
+        'walker' => '',
         'theme_location' => ''
     );
 
