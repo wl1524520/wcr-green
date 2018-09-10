@@ -17,6 +17,5 @@
                 } 
             ?>
         </a>
-        <span class="list-author"><?php echo '&nbsp;&nbsp;-- ';the_author(); ?></span>
     </p>
 </article>
