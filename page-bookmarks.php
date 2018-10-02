@@ -34,6 +34,7 @@ if(function_exists('get_link_items')) echo get_link_items();
                 <li><p><a class="bm-link" href="https://www.qinco.net/" target="_blank">青谷</a><span class="bm-desc"><span class="bm-dem">：</span>HTML5建站服务</span></p></li>
                 <li><p><a class="bm-link" href="https://softwaredownload.gitbooks.io/openwrt-fanqiang/content/ebook/03.5.html" target="_blank">OpenWRT ss</a><span class="bm-desc"><span class="bm-dem">：</span>众所周知的原因</span></p></li>
                 <li><p><a class="bm-link" href="http://dimox.net/wordpress-breadcrumbs-without-a-plugin/" target="_blank">WordPress面包屑导航</a><span class="bm-desc"><span class="bm-dem">：</span>不使用插件主题集成</span></p></li>
+                <li><p><a class="bm-link" href="http://koolshare.cn" target="_blank">KoolShare</a><span class="bm-desc"><span class="bm-dem">：</span>源于玩家 服务玩家</span></p></li>
             </ul>
         </div>
     </div>

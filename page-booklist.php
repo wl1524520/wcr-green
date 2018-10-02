@@ -19,7 +19,7 @@ foreach ($res as $v) {
     $index = strpos($book_img, 'com/');
     $index = $index + strlen('com/');
     $book_img = substr($book_img, $index);
-    $book_img = 'https://img.uniteyun.com/douban/'.$book_img;
+    $book_img = 'https://cdn.uniteyun.com/douban/'.$book_img;
 
     $book_url   = $v['book']['alt'];
     $publisher  = $v['book']['publisher'];

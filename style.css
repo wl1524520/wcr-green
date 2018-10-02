@@ -159,6 +159,9 @@ article h4 {
 a:focus, input:focus, select:focus, textarea:focus {
     outline:0;
 }
+input,textarea {
+    -webkit-appearance: none;
+}
 
 /*
  * 重写Bootstrap导航条样式
