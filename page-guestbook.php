@@ -4,8 +4,7 @@ Template Name: 留言
 */
  get_header(); ?>
 
-    <article class="singlepost">
-        <div class="single-content">
+        <div class="page page-guestbook">
             <?php while ( have_posts() ) : the_post(); ?>
             <h1 class="text-center"><?php the_title(); ?></h1>
             <hr>
@@ -20,7 +19,6 @@ Template Name: 留言
                 一共坚持了<?php echo floor((time()-strtotime("2014-11-11"))/86400); ?>天。</strong></p>
             <?php endwhile; ?>
         </div>
-    </article>
     <?php comments_template(); ?>
 
 <?php get_footer(); ?>

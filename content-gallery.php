@@ -5,7 +5,7 @@
  *      文章中有图的不分栏
  */
 ?>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article class="post">
     <h2><a href="<?php the_permalink() ?>"><?php if(get_the_title($post->ID)) { the_title(); } else { the_time( get_option( 'date_format' ) ); } ?></a></h2>
     <div class="meta">
         <span class="meta-label"><span class="glyphicon glyphicon-calendar"></span> <?php echo '日期：'; ?><?php the_time( get_option( 'date_format' ) ); ?></span>

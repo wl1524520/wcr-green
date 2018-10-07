@@ -3,7 +3,7 @@
  * 主页模板
  */
 get_header(); ?>
-    <div class="article-list">
+    <div class="post-list">
         <?php
         if(have_posts()) :
             while (have_posts()) :

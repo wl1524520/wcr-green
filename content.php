@@ -5,7 +5,7 @@
  *      文章中有图的不分栏
  */
 ?>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article class="post">
     <p>
         <span class="list-date"><?php the_time( get_option( 'date_format' ) ); ?><span>
         <a class="list-title" href="<?php the_permalink() ?>">

@@ -17,8 +17,7 @@
     <meta name="baidu-site-verification" content="7j7FIKv351" />
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -27,8 +26,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
-<div id="wrapper">
+<body>
     <nav id="header" class="navbar navbar-default navbar-fixed-top navbar-static-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,15 +53,15 @@
         </div><!-- /.container-fluid -->
     </nav>
 
+    <div id="body-content">
     <div class="home-title">
-        <div class="container">
-            <p class="wp-slogan">青，取之于蓝而青于蓝；冰，水为之而寒于水。</p>
-        </div>
+        <p class="wp-slogan">青，取之于蓝而青于蓝；冰，水为之而寒于水。</p>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
+                <div class="content">
                 <div class="nav-bread">
                     <?php if (function_exists('dimox_breadcrumbs')) {dimox_breadcrumbs();} ?>
                 </div>
