@@ -12,7 +12,7 @@
     </div>
     
     <footer class="footer">
-        <p class="text-center">&copy; 2014-<?php echo date('Y'); ?> <span style="color: #e27575;font-size: 14px;">❤</span> <?php echo bloginfo('name'); ?></p>
+        <p class="text-center"><?php echo bloginfo('name'); ?> &copy; 2014-<?php echo date('Y'); ?></p>
     </footer>
     <!-- <a href="#" class="crunchify-top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a> -->
 
