@@ -151,6 +151,7 @@ foreach ($res as $v) {
           </div>
         </div>
         <?php endforeach; ?>
+        <hr>
 
         <?php endwhile; ?>
     </div>
