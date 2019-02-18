@@ -34,6 +34,8 @@ if(function_exists('get_link_items')) echo get_link_items();
         <li><a href="http://dimox.net/wordpress-breadcrumbs-without-a-plugin/" target="_blank">WordPress面包屑导航</a> ：不使用插件主题集成</li>
         <li><a href="http://koolshare.cn/forum.php" target="_blank">KoolShare</a> ：源于玩家 服务玩家</li>
         <li><a href="https://www.right.com.cn/forum/" target="_blank">恩山无线论坛</a> ：无线路由器爱好者的天堂</li>
+        <li><a href="http://lovebusu.com/" target="_blank">爱不溯资源站</a> ：免费快捷下载后期和平面教程素材以及MAD的网站</li>
+        <li><a href="http://97866.com/" target="_blank">花生小店</a> ：专注小程序社交电商营销</li>
     </ul>
 </div>
 
