@@ -7,7 +7,8 @@ Template Name: 豆瓣书单
 <?php
 // 获取豆瓣数据
 $userID = "163565975";   //这里修改为你的豆瓣ID (ps:并非昵称)
-$url = "https://api.douban.com/v2/book/user/$userID/collections?count=100"; //最多取100条数据
+// $url = "https://api.douban.com/v2/book/user/163565975/collections?count=100"; //最多取100条数据
+$url = "https://wanglu.info/v2/book/user/$userID/collections?count=100"; //最多取100条数据
 $res = json_decode(file_get_contents($url), True); //读取api得到json
 $res = $res['collections'];
 foreach ($res as $v) {
