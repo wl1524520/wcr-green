@@ -6,14 +6,14 @@
  */
 ?>
 
-<article class="entry home has-thumb" id="post-5604">
-    <div class="entry-thumb">
-        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="wp-post-image" width="100" height="100">
-        </a>
-    </div>
-    <div class="entry-body">
-        <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-        <div class="entry-content"><p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_excerpt(); ?></a></p></div>
-    </div>
+<article class="media">
+  <div class="media-left media-middle">
+    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+      <img class="media-object" src="<?php wpjam_post_thumbnail([150,150],$crop=1);?>" alt="<?php the_title(); ?>">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><?php the_title(); ?></h4>
+    <?php the_excerpt(); ?>
+  </div>
 </article>
