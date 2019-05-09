@@ -9,7 +9,7 @@
 <article class="media">
   <div class="media-left media-middle">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-      <img class="media-object" src="<?php wpjam_post_thumbnail([150,150],$crop=1);?>" alt="<?php the_title(); ?>">
+      <img class="media-object" src="<?php wpjam_get_post_thumbnail_url($post=null, $size='full', $crop=1);?>" alt="<?php the_title(); ?>">
     </a>
   </div>
   <div class="media-body">
