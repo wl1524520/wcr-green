@@ -5,17 +5,15 @@
  *      文章中有图的不分栏
  */
 ?>
-<article class="post">
-    <p>
-        <span class="list-date"><?php the_time( get_option( 'date_format' ) ); ?><span>
-        <a class="list-title" href="<?php the_permalink() ?>">
-            <?php 
-                if(get_the_title($post->ID)) { 
-                    the_title(); 
-                } else { 
-                    the_time( get_option( 'date_format' ) ); 
-                } 
-            ?>
+
+<article class="entry home has-thumb" id="post-5604">
+    <div class="entry-thumb">
+        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="wp-post-image" width="100" height="100">
         </a>
-    </p>
+    </div>
+    <div class="entry-body">
+        <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+        <div class="entry-content"><p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_excerpt(); ?></a></p></div>
+    </div>
 </article>
