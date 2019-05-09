@@ -16,7 +16,7 @@ if (has_post_thumbnail()) {
 <article class="media">
   <div class="media-left media-middle">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-      <img class="media-object" src="<?php echo $img;?>" alt="<?php the_title(); ?>">
+      <img class="media-object" src="<?php echo $img;?>" alt="<?php the_title(); ?>" width="200">
     </a>
   </div>
   <div class="media-body">
