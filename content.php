@@ -5,11 +5,18 @@
  *      文章中有图的不分栏
  */
 ?>
+<?php 
+if (has_post_thumbnail()) {
+    $img = get_the_post_thumbnail_url();
+} else {
+    $img = 'https://wanglu.info/wp-content/uploads/2016/08/2016080214355420.png';
+}
 
+?>
 <article class="media">
   <div class="media-left media-middle">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-      <img class="media-object" src="<?php wpjam_get_post_thumbnail_url($post=null, $size='full', $crop=1);?>" alt="<?php the_title(); ?>">
+      <img class="media-object" src="<?php echo $img;?>" alt="<?php the_title(); ?>">
     </a>
   </div>
   <div class="media-body">
