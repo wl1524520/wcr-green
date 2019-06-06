@@ -11,7 +11,7 @@
   </div>
   <div class="media-body">
     <h4 class="media-heading"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+    <a class="excerpt" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
         <?php the_excerpt(); ?>
     </a>
   </div>
