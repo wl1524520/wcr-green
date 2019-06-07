@@ -323,13 +323,13 @@ article h4 {
     font-size: 22px;
 }
 article a {
-    color: #5cb85c;
-}
-article.media a {
-	color: #1A1A1A;
+    color: #5ca85c;
 }
 article a:hover {
     color: #5cc85c;
+}
+article a.excerpt, article a.excerpt:hover {
+	color: #1A1A1A;
 }
 article.media img {
     width: 240px;
@@ -670,11 +670,17 @@ textarea#comment{
 }
 
 @media (max-width: 768px) {
+    article h4 {
+        font-size: 20px;
+    }
     article.media img {
         width: 100px;
     }
     article .excerpt {
         display: none;
+    }
+    article .media-body {
+        vertical-align: middle;
     }
 }
 
