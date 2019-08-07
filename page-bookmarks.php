@@ -21,7 +21,6 @@ if(function_exists('get_link_items')) echo get_link_items();
         <li><a href="https://oj.leetcode.com/" target="_blank">LeetCode</a> ：LeetCode</li>
         <li><a href="http://www.jinbuguo.com/" target="_blank">金步国作品集</a> ：各种有用文档的翻译</li>
         <li><a href="http://www.liaoxuefeng.com/" target="_blank">廖雪峰的官方网站</a> ：研究互联网产品和技术，提供原创中文精品教程</li>
-        <li><a href="http://www.williamlong.info/" target="_blank">月光博客</a> ：青青子衿, 悠悠我心, 但为君故, 沉吟至今</li>
         <li><a href="https://www.leavesongs.com/" target="_blank">离别歌</a> ：phithon的小站，长期存在与分享关于网络安全与各种编程的原创文章。</li>
         <li><a href="http://blog.wpjam.com/" target="_blank">我爱水煮鱼</a> ：人人都爱 WordPress</li>
         <li><a href="https://laod.cn" target="_blank">老D博客</a> ：关注谷歌服务，分享互联网精神！</li>
@@ -37,7 +36,10 @@ if(function_exists('get_link_items')) echo get_link_items();
         <li><a href="http://97866.com/" target="_blank">花生小店</a> ：专注小程序社交电商营销</li>
         <li><a href="https://osx.cx/" target="_blank">黑苹果社区</a> ：黑苹果系统安装</li>
         <li><a href="https://learnku.com/laravel" target="_blank">Laravel社区</a></li>
+        <li><a href="http://xvtx.ru/xwrt/index.htm" target="_blank">梅林固件</a></li>
+        <li><a href="https://www.kancloud.cn/jabber/wordpress/296766" target="_blank">WordPress 开发手册</a></li>
         <li><a href="http://wind4.github.io/vlmcsd/" target="_blank">vlmcsd</a></li>
+        <li><a href="https://www.layui.com/" target="_blank">Layui</a> ：经典模块化前端框架</li>
     </ul>
 </div>
 
