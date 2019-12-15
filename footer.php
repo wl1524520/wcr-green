@@ -12,7 +12,12 @@
     </div>
     
     <footer class="footer">
-        <p class="text-center"><?php echo bloginfo('name'); ?> &copy; 2014-<?php echo date('Y'); ?></p>
+        <p class="text-center">
+<?php echo bloginfo('name') . ' ' . date('Y'); ?> &copy;
+<a href="http://www.beian.miit.gov.cn/" rel="external nofollow" target="_blank">
+<?php echo get_option('zh_cn_l10n_icp_num'); ?>
+</a>
+        </p>
     </footer>
     <!-- <a href="#" class="crunchify-top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a> -->
 
