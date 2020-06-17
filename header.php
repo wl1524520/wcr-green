@@ -1,6 +1,7 @@
 <?php
 /*
  * 戊辰人博客header模板
+ * style="filter:grayscale(1)"
  */
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
     <meta name="baidu-site-verification" content="7j7FIKv351" />
 
     <!-- Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
