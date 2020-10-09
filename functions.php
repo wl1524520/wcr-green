@@ -8,6 +8,14 @@ require get_template_directory() . '/inc/wcr-nav.php';
 require get_template_directory() . '/inc/wcr-pagenav.php';
 require get_template_directory() . '/inc/wcr-breadcrumbs.php';
 
+/* 彻底屏蔽主题自定义功能 */
+add_filter('map_meta_cap', function($caps, $cap){
+	if($cap == 'customize'){
+		return ['do_not_allow'];
+	}
+	return $caps;
+},10,2);
+
 // 并没有什么卵用
 if (! isset($content_width)) $content_width = 900;
 
