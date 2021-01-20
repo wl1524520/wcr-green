@@ -14,8 +14,6 @@ if(function_exists('get_link_items')) echo get_link_items();
         <li><a href="https://lianjie.fun/" target="_blank">Lianjie's Blog</a> ：范廉洁的个人博客</li>
         <li><a href="https://pipro.no/" target="_blank">PIPRO</a> ：the official website for the Pipro company</li>
         <li><a href="https://ikkesant.men/" target="_blank">IKKE SANT 艺可尚特</a> ：一个有点意思的网站</li>
-        <li><a href="https://www.ynuvs.com/" target="_blank">天地广体育</a> ：敢为者，得天下；有信者，天地广。</li>
-        <li><a href="http://www.hy-chn.cn/" target="_blank">合一体育</a> ：云南合一体育</li>
         <li><a href="https://bbs.deepin.org/" target="_blank">深度操作系统</a> ：深度操作系统官方论坛</li>
         <li><a href="http://www.izhuyue.com" target="_blank">FROYO's Blog</a> ：将来的你，一定会感谢现在努力的自己。</li>
         <li><a href="https://www.qxfell.com/" target="_blank">小飞熊's blog</a> ：一个爱玩爱折腾从业于IT的小伙子的博客 喜欢Linux 崇尚开源精神</li>
@@ -34,7 +32,6 @@ if(function_exists('get_link_items')) echo get_link_items();
         <li><a href="https://osx.cx/" target="_blank">黑苹果社区</a> ：黑苹果系统安装</li>
         <li><a href="https://learnku.com/laravel" target="_blank">Laravel社区</a></li>
         <li><a href="http://xvtx.ru/xwrt/index.htm" target="_blank">梅林固件</a></li>
-        <li><a href="https://www.kancloud.cn/jabber/wordpress/296766" target="_blank">WordPress 开发手册</a></li>
         <li><a href="http://wind4.github.io/vlmcsd/" target="_blank">vlmcsd</a> ：激活Windows和Office</li>
         <li><a href="https://www.layui.com/" target="_blank">Layui</a> ：经典模块化前端框架</li>
         <li><a href="https://breed.hackpascal.net/" target="_blank">Breed</a></li>
