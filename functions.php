@@ -3,10 +3,17 @@
  * 功能函数文件
  */
 require get_template_directory() . '/inc/wcr-archives.php';
-require get_template_directory() . '/inc/wcr-bookmarks.php';
+// require get_template_directory() . '/inc/wcr-bookmarks.php';
 require get_template_directory() . '/inc/wcr-nav.php';
 require get_template_directory() . '/inc/wcr-pagenav.php';
 require get_template_directory() . '/inc/wcr-breadcrumbs.php';
+
+// 显示页面性能参数
+function wcr_performance( $visible = false ) {
+    $stat = get_num_queries() . ' queries in ' . timer_stop(0, 6) . ' seconds';
+    $stat .= sprintf(', using %.3fMB memory', memory_get_peak_usage() / 1024 / 1024);
+    echo $visible ? $stat : "<!-- {$stat} -->\n" ;
+}
 
 /* 彻底屏蔽主题自定义功能 */
 add_filter('map_meta_cap', function($caps, $cap){
@@ -124,8 +131,6 @@ function wcr_head_css() {
 }
 endif;
 add_action('wp_head', 'wcr_head_css');
-
-
 
 // 侧边栏
 /*

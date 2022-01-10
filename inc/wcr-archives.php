@@ -2,11 +2,13 @@
 
 /* Archives list v2014 by zwwooooo | https://zww.me */
 function wcr_archives_list() {
-    if( !$output = get_option('wcr_archive_list_cache') ){
-    //if( true ){
+    $key = 'wcr_archive_list_cache';
+    // !$output = get_option('wcr_archive_list_cache');
+    // $output = wp_cache_get($key, 'archive');
+    if( !$output = wp_cache_get($key, 'archive') ){
         $output = '<div>';
         $args = array(
-            'post_type' => array('archives', 'post', 'zsay'),
+            'post_type' => 'post', // 如果有多个post，可以写array('archives', 'post'),
             'posts_per_page' => -1, //全部 posts
             'ignore_sticky_posts' => 1, //忽略 sticky posts
         );
@@ -44,11 +46,14 @@ function wcr_archives_list() {
         }
 
         $output .= '</div>';
-        update_option('wcr_archive_list_cache', $output);
+        // update_option('wcr_archive_list_cache', $output);
+        wp_cache_set($key, $output, 'archive');
     }
     echo $output;
 }
 function clear_db_cache_archives_list() {
-    update_option('wcr_archive_list_cache', ''); // 清空 zww_archives_list
+    // update_option('wcr_archive_list_cache', ''); // 清空 zww_archives_list
+    $key = 'wcr_archive_list_cache';
+    wp_cache_delete($key, 'archive');
 }
 add_action('save_post', 'clear_db_cache_archives_list'); // 新发表文章/修改文章时
