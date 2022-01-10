@@ -14,10 +14,10 @@ add_filter('map_meta_cap', function($caps, $cap){
 		return ['do_not_allow'];
 	}
 	return $caps;
-},10,2);
+}, 10, 2);
 
 // 链接管理器
-add_filter('pre_option_link_manager_enabled','__return_true');
+// add_filter('pre_option_link_manager_enabled','__return_true');
 
 // 并没有什么卵用
 if (! isset($content_width)) $content_width = 900;
